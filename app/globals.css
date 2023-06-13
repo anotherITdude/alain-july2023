@@ -8,3 +8,28 @@ body {
   padding: 0;
   margin: 0;
 }
+
+@font-face {
+  font-family: "gotham-black";
+  src: url("../Fonts/Gotham-Black_1.otf");
+}
+
+@font-face {
+  font-family: "gotham-black-italic";
+  src: url("../Fonts/Gotham-BlackItalic_1.otf");
+}
+
+@font-face {
+  font-family: "neosans-bold";
+  src: url("../Fonts/Neo\ Sans\ Std\ Bold.otf");
+}
+
+@font-face {
+  font-family: "neosans-medium";
+  src: url("../Fonts/Neo\ Sans\ Std\ Medium.otf");
+}
+
+@font-face {
+  font-family: "primetime";
+  src: url("../Fonts/PRIMETIME.ttf");
+}
