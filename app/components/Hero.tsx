@@ -11,8 +11,7 @@ const Hero = () => {
       <nav className="flex justify-between px-4 overflow-hidden">
         <div
           className="font-neosans-medium uppercase flex
-          justify-center items-center gap-[3px]
-          
+          justify-center items-center gap-[3px]  
         "
         >
           <Link className="text-white cursor-pointer" href="/">
