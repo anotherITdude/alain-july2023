@@ -1,5 +1,21 @@
-import Image from "next/image";
+import Container from "./components/Container";
+import Hero from "./components/Hero";
+import HowTo from "./components/HowTo";
+import Registration from "./components/Registration";
+import Scholarships from "./components/Scholarships";
+import SchoolYear from "./components/SchoolYear";
+import Terms from "./components/Terms";
 
 export default function Home() {
-  return <main className="">This is english version</main>;
+  return (
+    <Container>
+      
+      <Hero />
+      {/* <HowTo />
+      <Registration />
+      <Scholarships />
+      <SchoolYear />
+      <Terms /> */}
+    </Container>
+  );
 }

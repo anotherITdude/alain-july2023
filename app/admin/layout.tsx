@@ -1,7 +1,4 @@
 import "../globals.css";
-import { Inter } from "next/font/google";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
   title: "Al Ain Farms | Admin Section",
@@ -14,10 +11,11 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-      <html lang="en">
-      <body className=''>
+    <html lang="en">
+      <body className="">
         this is admin section
-        {children}</body>
+        {children}
+      </body>
     </html>
   );
 }
