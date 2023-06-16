@@ -14,13 +14,13 @@ const Hero = () => {
           justify-center items-center gap-[3px]  
         "
         >
-          <Link className="text-white cursor-pointer" href="/">
+          <Link className="text-white cursor-pointer" href="/ar">
             Ar
           </Link>
           <div className="flex pb-[25px] text-4xl font-sans text-[#7EE4FF]">
             .
           </div>
-          <Link className="text-[#7EE4FF] cursor-not-allowed" href="/ar">
+          <Link className="text-[#7EE4FF] cursor-not-allowed" href="/">
             Eng
           </Link>
         </div>

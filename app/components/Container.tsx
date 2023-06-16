@@ -7,9 +7,9 @@ const Container: React.FC<ContainerProps> = ({ children }: ContainerProps) => {
   return (
     <div
       className="
-       max-w-[1100px]
-        mx-auto
-        rounded-sm"
+      max-w-[1100px]
+      mx-auto
+      rounded-sm"
     >
       {children}
     </div>
