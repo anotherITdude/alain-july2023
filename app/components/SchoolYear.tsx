@@ -53,7 +53,7 @@ const SchoolYear = () => {
             priority={true}
             quality={100}
             src={schoolyear_right}
-            className="absolute w-[75%] bottom-0 left-[25%]"
+            className="absolute w-[65%] bottom-0 left-[30%]"
           />
         </div>
       </div>
