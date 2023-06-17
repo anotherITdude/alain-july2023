@@ -9,12 +9,12 @@ import Terms from "./components/Terms";
 export default function Home() {
   return (
     <Container>
-      
       <Hero />
+      <SchoolYear />
       {/* <HowTo />
       <Registration />
       <Scholarships />
-      <SchoolYear />
+     
       <Terms /> */}
     </Container>
   );

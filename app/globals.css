@@ -34,6 +34,11 @@ body {
 }
 
 @font-face {
+  font-family: "neosans-regular";
+  src: url("../Fonts/Neo\ Sans\ Std\ Regular.otf");
+}
+
+@font-face {
   font-family: "primetime";
   src: url("../Fonts/PRIMETIME.ttf");
 }
@@ -42,7 +47,21 @@ body {
   .hero {
     background-image: url(./../public/hero_bg.jpg);
   }
+
+  .school_year {
+    background-image: url(./../public/school_year.jpg);
+  }
   .shadow {
+    text-shadow: #002e6d 1.8px 3px 0px;
+    -webkit-text-stroke: 1px #002e6d;
+  }
+
+  .shadow_reverse {
+    text-shadow: #ffffff 1.5px 1.5px 0px;
+    -webkit-text-stroke: 1px #ffffff;
+  }
+
+  .shadow_h1 {
     text-shadow: #002e6d 1.8px 3px 0px;
     -webkit-text-stroke: 1px #002e6d;
   }
