@@ -51,6 +51,13 @@ body {
   .school_year {
     background-image: url(./../public/school_year.jpg);
   }
+
+  .scholarship {
+    background-image: url(./../public/scholarship_bg.jpg);
+  }
+
+
+
   .shadow {
     text-shadow: #002e6d 1.8px 3px 0px;
     -webkit-text-stroke: 1px #002e6d;
@@ -62,6 +69,11 @@ body {
   }
 
   .shadow_h1 {
+    text-shadow: #002e6d 1.8px 3px 0px;
+    -webkit-text-stroke: 1px #002e6d;
+  }
+
+  .shadow_h2 {
     text-shadow: #002e6d 1.8px 3px 0px;
     -webkit-text-stroke: 1px #002e6d;
   }

@@ -11,9 +11,10 @@ export default function Home() {
     <Container>
       <Hero />
       <SchoolYear />
+      <Scholarships />
       {/* <HowTo />
       <Registration />
-      <Scholarships />
+      
      
       <Terms /> */}
     </Container>
