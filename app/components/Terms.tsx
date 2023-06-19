@@ -7,7 +7,7 @@ const Terms = () => {
         <div className="">
           <Heading asterisk={true} title="Terms & conditions" />
         </div>
-        <ul className="list list-decimal font-neosans-regular text-[#002E6D] pl-7 pr-2 leading-tight">
+        <ul className="list list-decimal font-neosans-regular text-[#002E6D] pl-7 pr-4 leading-tight">
           <li>
             To enter the promotion, participants have to purchase any Al Ain
             Farms Fresh Milk, Long Life Milk, Fresh Chicken, Fresh Eggs, Fresh

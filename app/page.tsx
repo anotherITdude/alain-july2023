@@ -13,9 +13,7 @@ export default function Home() {
       <SchoolYear />
       <Scholarships />
       <HowTo />
-      {/* <Registration />
-       */}
-
+      <Registration />
       <Terms />
     </Container>
   );
