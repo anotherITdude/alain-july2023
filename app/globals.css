@@ -56,6 +56,10 @@ body {
     background-image: url(./../public/scholarship_bg.jpg);
   }
 
+   .howto {
+    background-image: url(./../public/howto_bg.jpg);
+  }
+
 
 
   .shadow {
@@ -80,5 +84,9 @@ body {
 
   .heading-2 {
     @apply text-white text-3xl uppercase font-primetime;
+  }
+
+  .list li {
+    padding-top: 15px;
   }
 }
