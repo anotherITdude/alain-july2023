@@ -14,9 +14,9 @@ export default function Home() {
       <Scholarships />
       <HowTo />
       {/* <Registration />
-      
-     
-      <Terms /> */}
+       */}
+
+      <Terms />
     </Container>
   );
 }

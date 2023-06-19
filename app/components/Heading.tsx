@@ -4,15 +4,16 @@ import asteriskImg from "./../../public/asterisk.svg";
 interface HeadingProps {
   title: string;
   asterisk?: boolean;
+  className?: string;
 }
-const Heading: React.FC<HeadingProps> = ({ title, asterisk }) => {
+const Heading: React.FC<HeadingProps> = ({ title, asterisk, className }) => {
   return (
     <div>
       {title && (
-        <div className="heading-2 shadow flex gap-[2px]">
+        <div className="`${className}` heading-2 shadow_h2 flex text-3xl font-primetime text-white pt-4 pl-2">
           {asterisk && (
             <Image
-              quality={80}
+              quality={100}
               priority={true}
               width={15}
               alt="important"
