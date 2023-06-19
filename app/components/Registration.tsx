@@ -4,7 +4,7 @@ import { useState } from "react";
 import { FieldValues, useForm } from "react-hook-form";
 import form_right from "./../../public/form_right.png";
 import Button from "./Button";
-import Input from "./input";
+import Input from "./Input";
 
 const Registration = () => {
   const [isLoading, setIsLoading] = useState(false);
