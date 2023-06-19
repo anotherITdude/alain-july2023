@@ -108,7 +108,7 @@ const Registration = () => {
             priority={true}
             quality={100}
             src={form_right}
-            className="m-auto w-[150px] absolute bottom-[0%] left-8"
+            className="m-auto w-[150px] absolute bottom-[0%] left-4"
           />
         </div>
       </div>
