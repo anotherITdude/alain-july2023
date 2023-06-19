@@ -1,11 +1,10 @@
-'use client'
-import Image from 'next/image';
-import { useState } from 'react';
-import { FieldValues, useForm } from 'react-hook-form';
+"use client";
+import Image from "next/image";
+import { useState } from "react";
+import { FieldValues, useForm } from "react-hook-form";
 import form_right from "./../../public/form_right.png";
-import Button from './Button';
-import Input from './input';
-
+import Button from "./Button";
+import Input from "./input";
 
 const Registration = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -95,7 +94,9 @@ const Registration = () => {
             <div className="form-field pt-4">
               <Button
                 label="Submit"
-                onClick={() => {console.log('button clicked')}}
+                onClick={() => {
+                  console.log("button clicked");
+                }}
               />
             </div>
           </form>
@@ -113,6 +114,6 @@ const Registration = () => {
       </div>
     </div>
   );
-}
+};
 
-export default Registration
+export default Registration;
