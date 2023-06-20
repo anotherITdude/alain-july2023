@@ -37,7 +37,7 @@ const SchoolYear = () => {
             priority={true}
             quality={100}
             src={clock}
-            className="absolute w-[18%] right-[50%] top-[1.9%] animate-alarm-ring"
+            className="absolute w-[18%] right-[50%] top-[1.5%] animate-alarm-ring"
           />
           <Image
             alt="school year"
