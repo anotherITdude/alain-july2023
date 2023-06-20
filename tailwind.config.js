@@ -5,6 +5,7 @@ module.exports = {
     './components/**/*.{js,ts,jsx,tsx,mdx}',
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
+  
   theme: {
     screens: {
       sm: '480px',
@@ -12,11 +13,16 @@ module.exports = {
       lg: '976px',
       xl: '1440px',
     },
+    
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      },
+      variants: {
+        // ...
+        animation: ['responsive', 'motion-safe', 'motion-reduce'],
       },
       fontFamily: {
         'gotham-black': ['gotham-black'],

@@ -92,4 +92,20 @@ body {
   .form-field{
     padding-bottom: 5px;
   }
+  
+}
+
+@keyframes alarm-ring {
+  0% {
+    transform: rotate(0);
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.8);
+  }
+  50% {
+    transform: rotate(15deg);
+    box-shadow: 0 0 0 20px rgba(255, 0, 0, 0.4);
+  }
+  100% {
+    transform: rotate(-15deg);
+    box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.8);
+  }
 }

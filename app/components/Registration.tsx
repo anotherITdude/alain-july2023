@@ -29,7 +29,7 @@ const Registration = () => {
             <div className="form-field">
               <Input
                 id="name"
-                label="Name"
+                label="NAME"
                 disabled={isLoading}
                 register={register}
                 errors={errors}
@@ -50,7 +50,7 @@ const Registration = () => {
             <div className="form-field">
               <Input
                 id="email"
-                label="Email"
+                label="EMAIL"
                 disabled={isLoading}
                 register={register}
                 errors={errors}
@@ -93,7 +93,7 @@ const Registration = () => {
             </div>
             <div className="form-field pt-4">
               <Button
-                label="Submit"
+                label="SUBMIT"
                 onClick={() => {
                   console.log("button clicked");
                 }}
