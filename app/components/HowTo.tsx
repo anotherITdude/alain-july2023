@@ -4,7 +4,7 @@ import howto_right from './../../public/howto_right.png';
 const HowTo = () => {
   return (
     <div className="bg-cover bg-no-repeat howto h-[616px] relative">
-      <div className="flex flex-col pt-3">
+      <div className="flex flex-col pt-3 section">
         <div className="left">
           <div className="shadow_h2 text-3xl font-primetime text-white pl-4 pt-4 pb-2">
             How to Enter

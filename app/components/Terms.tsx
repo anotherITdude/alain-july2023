@@ -3,7 +3,7 @@ import Heading from "./Heading";
 const Terms = () => {
   return (
     <div className=" relative bg-[#9AE7FC] pb-4">
-      <div className=" pt-3 pb-3">
+      <div className="section">
         <div className="pb-1">
           <Heading asterisk={true} title="Terms & conditions" />
         </div>

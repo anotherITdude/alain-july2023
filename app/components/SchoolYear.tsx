@@ -6,7 +6,7 @@ import book from './../../public/book.png'
 const SchoolYear = () => {
   return (
     <div className="bg-center bg-no-repeat school_year h-[550px] md:h-[650] relative">
-      <div className="flex flex-col pt-3">
+      <div className="flex flex-col section">
         <div className="left m-4">
           <div className="shadow_h1 text-white text-3xl font-primetime uppercase">
             start <br />
@@ -37,7 +37,7 @@ const SchoolYear = () => {
             priority={true}
             quality={100}
             src={clock}
-            className="absolute w-[18%] right-[50%] top-[1.5%] animate-alarm-ring"
+            className="absolute w-[22%] right-[35%] top-[-1%] animate-alarm-ring"
           />
           <Image
             alt="school year"
@@ -45,7 +45,7 @@ const SchoolYear = () => {
             priority={true}
             quality={100}
             src={book}
-            className="absolute w-[30%] left-0 top-[60%]"
+            className="absolute w-[30%] left-0 top-[70%]"
           />
           <Image
             alt="school year"
@@ -53,7 +53,7 @@ const SchoolYear = () => {
             priority={true}
             quality={100}
             src={schoolyear_right}
-            className="absolute w-[68%] bottom-0 left-[24%]"
+            className="absolute w-[65%] bottom-0 left-[25%]"
           />
         </div>
       </div>

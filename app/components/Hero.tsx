@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <div className="bg-center bg-no-repeat hero h-[591px] md:h-[650]">
       <Navbar />
-      <div className="flex flex-col-reverse md:flex-row">
+      <div className="flex flex-col-reverse md:flex-row section">
         <div className="flex justify-center items-center">
           <Image
             className="w-[65%] hidden md:block"
