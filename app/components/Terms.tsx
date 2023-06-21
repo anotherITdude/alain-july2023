@@ -4,7 +4,7 @@ const Terms = () => {
   return (
     <div className=" relative bg-[#9AE7FC] pb-4">
       <div className=" pt-3 pb-3">
-        <div>
+        <div className="pb-1">
           <Heading asterisk={true} title="Terms & conditions" />
         </div>
         <ul className="list list-decimal font-neosans-regular text-[#002E6D] pl-7 pr-4 leading-tight">
