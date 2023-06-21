@@ -1,12 +1,16 @@
-import Image from 'next/image';
-import Link from 'next/link';
-import React from 'react'
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
 import logo from "./../../public/logo.png";
+import { motion } from "framer-motion";
 
 const Navbar = () => {
   return (
-    <nav className="flex justify-between pl-4">
-      <div
+    <motion.nav className="flex justify-between pl-4">
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
         className="font-neosans-medium uppercase flex
           justify-center items-center gap-[3px]
         "
@@ -20,8 +24,10 @@ const Navbar = () => {
         <Link className="text-[#7EE4FF] cursor-not-allowed" href="/">
           Eng
         </Link>
-      </div>
-      <div className="">
+      </motion.div>
+      <motion.div
+        className=""
+      >
         <Image
           quality={100}
           placeholder="empty"
@@ -29,9 +35,9 @@ const Navbar = () => {
           alt="logo"
           className="w-[100px]"
         />
-      </div>
-    </nav>
+      </motion.div>
+    </motion.nav>
   );
-}
+};
 
-export default Navbar
+export default Navbar;

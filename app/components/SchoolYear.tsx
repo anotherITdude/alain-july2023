@@ -1,7 +1,12 @@
+"use client";
 import Image from "next/image";
-import schoolyear_right from "./../../public/schoolyear_right.png"
-import clock from './../../public/clock.png'
-import book from './../../public/book.png'
+import schoolyear_right from "./../../public/schoolyear_right.png";
+import clock from "./../../public/clock.png";
+import book from "./../../public/book.png";
+import plane from "./../../public/plane.png";
+
+import { useMotionValue, useSpring } from "framer-motion";
+import { motion } from "framer-motion";
 
 const SchoolYear = () => {
   return (
@@ -17,7 +22,6 @@ const SchoolYear = () => {
             Win school fees today!
           </div>
           <div className="clockDiv flex py-2">
-            <div className="hidden md:block">clock</div>
             <div className="text-md">
               <div className="font-neosans-regular text-white">
                 Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
@@ -31,22 +35,47 @@ const SchoolYear = () => {
           </div>
         </div>
         <div className="right">
-          <Image
-            alt="school year"
-            placeholder="empty"
-            priority={true}
-            quality={100}
-            src={clock}
-            className="absolute w-[22%] right-[35%] top-[-1%] animate-alarm-ring"
-          />
-          <Image
-            alt="school year"
-            placeholder="empty"
-            priority={true}
-            quality={100}
-            src={book}
-            className="absolute w-[30%] left-0 top-[70%]"
-          />
+          <motion.div>
+            <Image
+              alt="school year"
+              placeholder="empty"
+              priority={true}
+              quality={100}
+              src={clock}
+              className="absolute w-[22%] right-[35%] top-[-1%] animate-alarm-ring"
+            />
+          </motion.div>
+          <motion.div>
+            <Image
+              alt="school year"
+              placeholder="empty"
+              priority={true}
+              quality={100}
+              src={book}
+              className="absolute w-[30%] left-[1%] top-[63%]"
+            />
+          </motion.div>
+          <motion.div
+            animate={{
+              scale: [1, 1, 1.2, 1, 0],
+              rotate: [-2, -1, 1, 0, 10],
+            }}
+            transition={{
+              duration: 3,
+              ease: "linear",
+              repeat: Infinity,
+              repeatDelay: 4,
+            }}
+          >
+            <Image
+              alt="school year"
+              placeholder="empty"
+              priority={true}
+              quality={100}
+              src={plane}
+              className="absolute w-[25%] left-[20%] "
+            />
+          </motion.div>
           <Image
             alt="school year"
             placeholder="empty"
