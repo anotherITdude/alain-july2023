@@ -52,7 +52,7 @@ const SchoolYear = () => {
               priority={true}
               quality={100}
               src={book}
-              className="absolute w-[30%] left-[1%] top-[63%]"
+              className="absolute w-[30%] left-[1%] top-[67%]"
             />
           </motion.div>
           <motion.div
@@ -73,7 +73,7 @@ const SchoolYear = () => {
               priority={true}
               quality={100}
               src={plane}
-              className="absolute w-[25%] left-[20%] "
+              className="absolute w-[25%] left-[20%] top-10"
             />
           </motion.div>
           <Image
