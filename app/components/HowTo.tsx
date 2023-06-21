@@ -26,7 +26,7 @@ const HowTo = () => {
             priority={true}
             quality={100}
             src={howto_right}
-            className="m-auto mt-3"
+            className="m-auto mt-[-2%]"
           />
         </div>
       </div>

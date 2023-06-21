@@ -3,26 +3,26 @@
   <defs>
     <style>
       .cls-1 {
-        fill: #002e6d;
-      }
-
-      .cls-2 {
         fill: #fff;
       }
 
+      .cls-2 {
+        fill: #002e6d;
+      }
+
       .cls-3 {
-        stroke-width: 1.59px;
+        stroke-width: 0px;
       }
 
       .cls-3, .cls-4 {
         fill: none;
-        stroke: #002e6d;
+        stroke: #fff;
         stroke-linecap: round;
         stroke-linejoin: round;
       }
 
       .cls-4 {
-        stroke-width: 3.49px;
+        stroke-width: 0px;
       }
     </style>
   </defs>

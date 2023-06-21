@@ -19,10 +19,10 @@ const Registration = () => {
     },
   });
   return (
-    <div className="bg-cover bg-no-repeat registration h-[670px] relative ">
-      <div className="flex flex-col section">
+    <div className="bg-cover bg-no-repeat registration h-[700px] relative ">
+      <div className="flex flex-col section ">
         <div className="left">
-          <div className="shadow_h2 text-3xl font-primetime text-white pl-4 pb-3">
+          <div className="shadow_h2 text-3xl font-primetime text-white pl-4 pb-3 pt-3">
             Registration
           </div>
           <form className="pl-4 pr-4 pt-2">
@@ -108,7 +108,7 @@ const Registration = () => {
             priority={true}
             quality={100}
             src={form_right}
-            className="m-auto w-[150px] absolute bottom-[-1.2%] left-4"
+            className="m-auto w-[150px] absolute bottom-[1%] left-4"
           />
         </div>
       </div>
