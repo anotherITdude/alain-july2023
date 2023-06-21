@@ -10,7 +10,7 @@ const Heading: React.FC<HeadingProps> = ({ title, asterisk, className }) => {
   return (
     <div>
       {title && (
-        <div className="`${className}` heading-2  flex text-xl  text-[#002E6D] pt-4 pl-">
+        <div className="`${className}` heading-2  flex text-xl  text-[#002E6D] pt-4">
           {asterisk && (
             <Image
               quality={100}
