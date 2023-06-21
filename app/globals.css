@@ -60,12 +60,15 @@ body {
     background-image: url(./../public/howto_bg.jpg);
   }
 
-
+.registration {
+    background-image: url(./../public/howto_bg.jpg);
+  }
 
   .shadow {
     text-shadow: #002e6d 1.8px 3px 0px;
     -webkit-text-stroke: 1px #002e6d;
   }
+
 
   .shadow_reverse {
     text-shadow: #ffffff 1.5px 1.5px 0px;
@@ -90,7 +93,7 @@ body {
     padding-top: 15px;
   }
   .form-field{
-    padding-bottom: 5px;
+    padding-bottom: 15px;
   }
   
 }
