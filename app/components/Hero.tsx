@@ -8,17 +8,22 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <div className="bg-center bg-cover hero h-[591px] md:h-[650]">
+    <div className="bg-center bg-cover hero h-[591px] md:h-[480px]">
       <Navbar />
-      <div className="flex flex-col-reverse md:flex-row section">
+      <div
+        className="flex flex-col-reverse md:flex-row section
+      md:justify-center  "
+      >
         <motion.div
-          initial={{ opacity: 0, y: -10 }}
-          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
           className="flex justify-center items-center"
         >
           <Image
-            className="w-[65%] hidden md:block"
+            className="w-[65%] 
+            md:w-[490px] md:mt-[15%] 
+            hidden md:block"
             placeholder="empty"
             priority={true}
             quality={100}
@@ -26,6 +31,8 @@ const Hero = () => {
             src={hero_left}
           />
         </motion.div>
+
+        {/* mobile image */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -40,14 +47,17 @@ const Hero = () => {
             src={hero_left_mobile}
           />
         </motion.div>
+        {/* mobile image */}
+
         <motion.div
           initial={{ opacity: 0, x: 30 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 1 }}
-          className=""
+          className="flex justify-center items-center"
         >
           <Image
-            className="w-full"
+            className="w-full 
+            md:w-[550px] md:mt-[-14%]"
             placeholder="empty"
             priority={true}
             quality={100}
