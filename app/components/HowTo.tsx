@@ -1,9 +1,12 @@
+'use client'
 import Image from 'next/image';
 import howto_right from './../../public/howto_right.png';
+import { motion } from "framer-motion"; 
+
 
 const HowTo = () => {
   return (
-    <div className="bg-cover bg-no-repeat howto h-[616px] relative">
+    <div className="bg-cover bg-center howto h-[616px] relative">
       <div className="flex flex-col pt-3 section">
         <div className="left">
           <div className="shadow_h2 text-3xl font-primetime text-white pl-4 pt-4 pb-2">
@@ -20,14 +23,20 @@ const HowTo = () => {
           </ul>
         </div>
         <div className="right">
-          <Image
-            alt="school year"
-            placeholder="empty"
-            priority={true}
-            quality={100}
-            src={howto_right}
-            className="m-auto mt-[-2%]"
-          />
+          <motion.div
+            initial={{ opacity: 0, x: 30 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 2 }}
+          >
+            <Image
+              alt="school year"
+              placeholder="empty"
+              priority={true}
+              quality={100}
+              src={howto_right}
+              className="m-auto mt-[-2%]"
+            />
+          </motion.div>
         </div>
       </div>
     </div>

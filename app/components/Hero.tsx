@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
   return (
-    <div className="bg-center bg-no-repeat hero h-[591px] md:h-[650]">
+    <div className="bg-center bg-cover hero h-[591px] md:h-[650]">
       <Navbar />
       <div className="flex flex-col-reverse md:flex-row section">
         <motion.div

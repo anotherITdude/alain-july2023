@@ -10,7 +10,7 @@ import { motion } from "framer-motion";
 
 const SchoolYear = () => {
   return (
-    <div className="bg-center bg-no-repeat school_year h-[550px] md:h-[650] relative">
+    <div className="bg-center bg-cover school_year h-[580px] md:h-[650] relative">
       <div className="flex flex-col section">
         <div className="left m-4">
           <div className="shadow_h1 text-white text-3xl font-primetime uppercase">
@@ -35,7 +35,11 @@ const SchoolYear = () => {
           </div>
         </div>
         <div className="right">
-          <motion.div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1}}
+            transition={{ duration: 1 }}
+          >
             <Image
               alt="school year"
               placeholder="empty"
@@ -45,7 +49,11 @@ const SchoolYear = () => {
               className="absolute w-[22%] right-[35%] top-[-1%] animate-alarm-ring"
             />
           </motion.div>
-          <motion.div>
+          <motion.div
+            initial={{ opacity: 0, }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
             <Image
               alt="school year"
               placeholder="empty"

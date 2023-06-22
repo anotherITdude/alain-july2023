@@ -9,7 +9,7 @@ import Terms from "./components/Terms";
 export default function Home() {
   return (
     <Container>
-      <Hero />
+      <Hero  />
       <SchoolYear />
       <Scholarships />
       <HowTo />

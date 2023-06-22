@@ -5,6 +5,7 @@ import { FieldValues, useForm } from "react-hook-form";
 import form_right from "./../../public/form_right.png";
 import Button from "./Button";
 import Input from "./Input";
+import { motion } from "framer-motion";
 
 const Registration = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -19,7 +20,7 @@ const Registration = () => {
     },
   });
   return (
-    <div className="bg-cover bg-no-repeat registration h-[700px] relative ">
+    <div className="bg-cover bg-center registration h-[700px] relative ">
       <div className="flex flex-col section ">
         <div className="left">
           <div className="shadow_h2 text-3xl font-primetime text-white pl-4 pb-3 pt-3">
@@ -102,14 +103,20 @@ const Registration = () => {
           </form>
         </div>
         <div className="right">
-          <Image
-            alt="school year"
-            placeholder="empty"
-            priority={true}
-            quality={100}
-            src={form_right}
-            className="m-auto w-[150px] absolute bottom-[1%] left-4"
-          />
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+          >
+            <Image
+              alt="school year"
+              placeholder="empty"
+              priority={true}
+              quality={100}
+              src={form_right}
+              className=" w-[150px] absolute bottom-[1%] left-4"
+            />
+          </motion.div>
         </div>
       </div>
     </div>
