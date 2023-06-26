@@ -6,10 +6,10 @@ import { motion } from "framer-motion";
 
 const HowTo = () => {
   return (
-    <div className="bg-cover bg-center howto h-[616px] relative">
+    <div className="bg-cover bg-center howto h-[616px] md:h-[619px] relative">
       <div className="flex flex-col pt-3 section">
         <div className="left">
-          <div className="shadow_h2 text-3xl font-primetime text-white pl-4 pt-4 pb-2">
+          <div className="shadow_h2 text-3xl md:text-4xl lg:text-5xl font-primetime text-white pl-4 pt-4 pb-2 uppercase">
             How to Enter
           </div>
           <ul className="list list-decimal font-neosans-bold text-white pl-9 leading-tight">
@@ -34,7 +34,7 @@ const HowTo = () => {
               priority={true}
               quality={100}
               src={howto_right}
-              className="m-auto mt-[-2%]"
+              className="m-auto mt-[-2%] max-w-[480px]"
             />
           </motion.div>
         </div>

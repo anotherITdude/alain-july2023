@@ -7,12 +7,12 @@ module.exports = {
   ],
 
   theme: {
-    screens: {
-      sm: '480px',
-      md: '600px',
-      lg: '976px',
-      xl: '1440px',
-    },
+    // screens: {
+    //   sm: '480px',
+    //   md: '600px',
+    //   lg: '976px',
+    //   xl: '1440px',
+    // },
 
     extend: {
       backgroundImage: {

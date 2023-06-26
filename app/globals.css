@@ -99,5 +99,9 @@ body {
 }
 
 .section{
- @apply p-3 md:p-6
+ @apply p-3 md:p-10
+}
+
+.imgWidth {
+  width: calc(100vw - 50%);
 }

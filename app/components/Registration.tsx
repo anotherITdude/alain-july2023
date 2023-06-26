@@ -20,10 +20,10 @@ const Registration = () => {
     },
   });
   return (
-    <div className="bg-cover bg-center registration h-[700px] relative ">
+    <div className="bg-cover bg-center registration h-[700px] md:h-[740px]  relative ">
       <div className="flex flex-col section ">
         <div className="left">
-          <div className="shadow_h2 text-3xl font-primetime text-white pl-4 pb-3 pt-3">
+          <div className="shadow_h2 text-3xl md:text-4xl lg:text-5xl font-primetime text-white pl-4 pb-3 pt-3">
             Registration
           </div>
           <form className="pl-4 pr-4 pt-2">
