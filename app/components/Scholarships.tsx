@@ -36,7 +36,7 @@ const Scholarships = () => {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 2 }}
-              className="shadow_h2 text-3xl md:text-4xl font-primetime text-white pl-4 pb-2"
+              className="shadow_h2 text-3xl md:text-4xl lg:text-5xl font-primetime text-white pl-4 pb-2"
             >
               SCHOLARSHIPS
             </motion.div>
@@ -75,7 +75,7 @@ const Scholarships = () => {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 2 }}
-              className="shadow_h2 text-3xl md:text-4xl font-primetime text-white pl-4 pb-2"
+              className="shadow_h2 text-3xl md:text-4xl lg:text-5xl font-primetime text-white pl-4 pb-2"
             >
               BACK TO SCHOOL <br />
               VOUCHERS
