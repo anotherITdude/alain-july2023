@@ -34,7 +34,7 @@ const HowTo = () => {
               priority={true}
               quality={100}
               src={howto_right}
-              className="m-auto mt-[-2%] max-w-[480px]"
+              className="m-auto mt-[-2%] w-[100%] max-w-[480px]"
             />
           </motion.div>
         </div>
