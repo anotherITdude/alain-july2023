@@ -106,7 +106,9 @@ const Registration = () => {
                 type="file"
               />
             </div>
-            <div className="form-field pt-4">
+            <div
+              className={`form-field pt-4 ${isLoading ? "animate-pulse" : ""}`}
+            >
               <Button
                 disabled={isLoading}
                 label={`${isLoading ? "Submitting form..." : "Submit"}`}
