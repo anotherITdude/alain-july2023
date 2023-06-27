@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
-import { FieldValues, useForm } from "react-hook-form";
+import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
 import form_right from "./../../public/form_right.png";
 import Button from "./Button";
 import Input from "./Input";
@@ -15,10 +15,19 @@ const Registration = () => {
     formState: { errors },
   } = useForm<FieldValues>({
     defaultValues: {
+      name: "",
+      mobile: "",
       email: "",
-      password: "",
+      emirate: "",
+      reciept: "",
     },
   });
+
+  const onSubmit: SubmitHandler<FieldValues> = (data) => {
+    setIsLoading(true);
+    console.log(data);
+    //setIsLoading(false);
+  };
   return (
     <div className="bg-cover bg-center registration h-[700px] md:h-[740px]  relative ">
       <div className="flex flex-col section ">
@@ -31,7 +40,7 @@ const Registration = () => {
           >
             Registration
           </div>
-          <form className="pl-4 pr-4 pt-2">
+          <form onSubmit={handleSubmit(onSubmit)} className="pl-4 pr-4 pt-2">
             <div className="form-field ">
               <Input
                 id="name"
@@ -77,7 +86,7 @@ const Registration = () => {
             </div>
             <div className="form-field">
               <Input
-                id="emirateId"
+                id="eid"
                 label="EMIRATES ID NUMBER"
                 disabled={isLoading}
                 register={register}
@@ -99,10 +108,8 @@ const Registration = () => {
             </div>
             <div className="form-field pt-4">
               <Button
-                label="SUBMIT"
-                onClick={() => {
-                  console.log("button clicked");
-                }}
+                disabled={isLoading}
+                label={`${isLoading ? "Submitting form..." : "Submit"}`}
               />
             </div>
           </form>
