@@ -1,4 +1,6 @@
 "use client";
+import React, { ChangeEvent } from "react";
+
 import Image from "next/image";
 import { useState } from "react";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
@@ -8,6 +10,10 @@ import Input from "./Input";
 import { motion } from "framer-motion";
 import toast, { Toaster } from "react-hot-toast";
 
+import * as yup from "yup";
+import { schema } from "@/schemas/Validation";
+import { yupResolver } from "@hookform/resolvers/yup";
+
 const Registration = () => {
   const [isLoading, setIsLoading] = useState(false);
   const {
@@ -16,19 +22,23 @@ const Registration = () => {
     formState: { errors },
     reset,
   } = useForm<FieldValues>({
+    resolver: yupResolver(schema) as any, // Use 'as any' to handle type mismatch
+
     defaultValues: {
       name: "",
       mobile: "",
       email: "",
       emirate: "",
+      eid: "",
       reciept: "",
     },
   });
-  const notify = () => toast.success("UPloading data pleasse wait");
+  const notify = () => toast.success("Uploading data pleasse wait");
 
   const onSubmit: SubmitHandler<FieldValues> = (data) => {
     setIsLoading(true);
     const uploading = toast.loading("Uploading data pleasse wait");
+    console.log(data);
     setIsLoading(true);
     toast.dismiss(uploading);
     toast.success("Thankyou for your submission");
@@ -36,6 +46,7 @@ const Registration = () => {
     //reset();
     //setIsLoading(false);
   };
+
   return (
     <div className="bg-cover bg-center registration h-[700px] md:h-[740px]  relative ">
       <div className="flex flex-col section ">
@@ -68,7 +79,6 @@ const Registration = () => {
                 disabled={isLoading}
                 register={register}
                 errors={errors}
-                minLen={10}
                 type="number"
               />
             </div>
@@ -99,13 +109,12 @@ const Registration = () => {
                 disabled={isLoading}
                 register={register}
                 errors={errors}
-                minLen={15}
                 type="number"
               />
             </div>
             <div className="form-field">
               <Input
-                id="reciept"
+                id="receipt"
                 label="UPLOAD PURCHASE RECIEPT"
                 disabled={isLoading}
                 register={register}

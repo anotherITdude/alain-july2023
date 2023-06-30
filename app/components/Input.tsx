@@ -5,7 +5,6 @@ interface InputProps {
   id: string;
   label: string;
   type: string;
-  minLen?: number;
   number?: boolean;
   disabled?: boolean;
   required?: boolean;
@@ -18,7 +17,6 @@ const Input: React.FC<InputProps> = ({
   label,
   type = "text",
   disabled,
-  minLen,
   register,
   required,
   errors,
@@ -27,32 +25,13 @@ const Input: React.FC<InputProps> = ({
     <div className="w-full relative">
       <input
         id={id}
+        {...(type === "file"
+          ? {
+              accept: "image/jpeg, image/png",
+            }
+          : "")}
         disabled={disabled}
-        {...(type === "email"
-          ? {
-              ...register(id, {
-                required: "Please enter your " + label,
-                pattern: {
-                  value: /\S+@\S+\.\S+/,
-                  message: "Please enter a valid " + label,
-                },
-              }),
-            }
-          : type === "number"
-          ? {
-              ...register(id, {
-                required: "Please enter your " + label,
-                minLength: {
-                  value: minLen!,
-                  message: "Minimum " + minLen + " digits required",
-                },
-              }),
-            }
-          : {
-              ...register(id, {
-                required: "Please enter your " + label,
-              }),
-            })}
+        {...register(id)}
         placeholder=" "
         type={type}
         className={`
