@@ -6,6 +6,7 @@ import form_right from "./../../public/form_right.png";
 import Button from "./Button";
 import Input from "./Input";
 import { motion } from "framer-motion";
+import toast, { Toaster } from "react-hot-toast";
 
 const Registration = () => {
   const [isLoading, setIsLoading] = useState(false);
@@ -13,6 +14,7 @@ const Registration = () => {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm<FieldValues>({
     defaultValues: {
       name: "",
@@ -22,10 +24,16 @@ const Registration = () => {
       reciept: "",
     },
   });
+  const notify = () => toast.success("UPloading data pleasse wait");
 
   const onSubmit: SubmitHandler<FieldValues> = (data) => {
     setIsLoading(true);
-    console.log(data);
+    const uploading = toast.loading("Uploading data pleasse wait");
+    setIsLoading(true);
+    toast.dismiss(uploading);
+    toast.success("Thankyou for your submission");
+
+    //reset();
     //setIsLoading(false);
   };
   return (
@@ -40,6 +48,7 @@ const Registration = () => {
           >
             Registration
           </div>
+          <Toaster />
           <form onSubmit={handleSubmit(onSubmit)} className="pl-4 pr-4 pt-2">
             <div className="form-field ">
               <Input
@@ -49,6 +58,7 @@ const Registration = () => {
                 register={register}
                 errors={errors}
                 required
+                type="text"
               />
             </div>
             <div className="form-field">
@@ -58,7 +68,7 @@ const Registration = () => {
                 disabled={isLoading}
                 register={register}
                 errors={errors}
-                required
+                minLen={10}
                 type="number"
               />
             </div>
@@ -69,8 +79,7 @@ const Registration = () => {
                 disabled={isLoading}
                 register={register}
                 errors={errors}
-                required
-                type="string"
+                type="email"
               />
             </div>
             <div className="form-field">
@@ -80,7 +89,6 @@ const Registration = () => {
                 disabled={isLoading}
                 register={register}
                 errors={errors}
-                required
                 type="string"
               />
             </div>
@@ -91,7 +99,7 @@ const Registration = () => {
                 disabled={isLoading}
                 register={register}
                 errors={errors}
-                required
+                minLen={15}
                 type="number"
               />
             </div>
@@ -102,7 +110,6 @@ const Registration = () => {
                 disabled={isLoading}
                 register={register}
                 errors={errors}
-                required
                 type="file"
               />
             </div>

@@ -4,12 +4,13 @@ import { FieldErrors, FieldValues, UseFormRegister } from "react-hook-form";
 interface InputProps {
   id: string;
   label: string;
-  type?: string;
+  type: string;
+  minLen?: number;
+  number?: boolean;
   disabled?: boolean;
-  formatPrice?: boolean;
   required?: boolean;
   register: UseFormRegister<FieldValues>;
-  errors: FieldErrors;
+  errors: FieldErrors | any;
 }
 
 const Input: React.FC<InputProps> = ({
@@ -17,7 +18,7 @@ const Input: React.FC<InputProps> = ({
   label,
   type = "text",
   disabled,
-  formatPrice,
+  minLen,
   register,
   required,
   errors,
@@ -27,7 +28,31 @@ const Input: React.FC<InputProps> = ({
       <input
         id={id}
         disabled={disabled}
-        {...register(id, { required })}
+        {...(type === "email"
+          ? {
+              ...register(id, {
+                required: "Please enter your " + label,
+                pattern: {
+                  value: /\S+@\S+\.\S+/,
+                  message: "Please enter a valid " + label,
+                },
+              }),
+            }
+          : type === "number"
+          ? {
+              ...register(id, {
+                required: "Please enter your " + label,
+                minLength: {
+                  value: minLen!,
+                  message: "Minimum " + minLen + " digits required",
+                },
+              }),
+            }
+          : {
+              ...register(id, {
+                required: "Please enter your " + label,
+              }),
+            })}
         placeholder=" "
         type={type}
         className={`
@@ -57,7 +82,7 @@ const Input: React.FC<InputProps> = ({
           top-5 
           z-10 
           origin-[0] 
-          ${formatPrice ? "left-9" : "left-4"}
+          left-4
           peer-placeholder-shown:scale-100 
           peer-placeholder-shown:translate-y-0 
           peer-focus:scale-75
@@ -65,8 +90,13 @@ const Input: React.FC<InputProps> = ({
           ${errors[id] ? "text-rose-500" : "text-[#002E6D]"}
         `}
       >
-        {label}
+        {errors[id] ? (
+          <span className="uppercase text-xs">{errors[id]?.message}</span>
+        ) : (
+          label
+        )}
       </label>
+      <span className="text-xs ml-5 text-red-500 animate-pulse"></span>
     </div>
   );
 };
