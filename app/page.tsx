@@ -5,7 +5,6 @@ import Registration from "./components/Registration";
 import Scholarships from "./components/Scholarships";
 import SchoolYear from "./components/SchoolYear";
 import Terms from "./components/Terms";
-import MyForm from "./components/TestForm";
 
 export default function Home() {
   return (
