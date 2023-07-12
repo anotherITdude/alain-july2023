@@ -1,8 +1,8 @@
 import "../globals.css";
 
 export const metadata = {
-  title: "Al Ain Farms | Admin Section",
-  description: "Alain Farms July 2023 campaign",
+  title: "Alain Farms | Back to school, 2023",
+  description: "Alain Farms, back to school campaign, 2023",
 };
 
 export default function RootLayout({
@@ -12,10 +12,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="">
-        this is admin section
-        {children}
-      </body>
+      <link rel="icon" href="/favicon.ico" />
+      <body>{children}</body>
     </html>
   );
 }

@@ -1,11 +1,20 @@
-import React from 'react'
+import Container from "./components/Container";
+import Hero from "./components/Hero";
+import HowTo from "./components/HowTo";
+import Registration from "./components/Registration";
+import Scholarships from "./components/Scholarships";
+import SchoolYear from "./components/SchoolYear";
+import Terms from "./components/Terms";
 
-const Arabic = () => {
+export default function Home() {
   return (
-    <main className=''>
-      This is arabic version
-    </main>
-  )
+    <Container>
+      <Hero />
+      <SchoolYear />
+      <Scholarships />
+      <HowTo />
+      <Registration id="register" />
+      <Terms />
+    </Container>
+  );
 }
-
-export default Arabic
