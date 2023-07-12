@@ -48,7 +48,10 @@ const Registration = ({ ...props}) => {
   };
 
   return (
-    <div {...props} className="bg-cover bg-center registration h-[700px] md:h-[740px]  relative ">
+    <div
+      {...props}
+      className="bg-cover bg-center registration h-[700px] md:h-[740px]  relative "
+    >
       <div className="flex flex-col section ">
         <div className="left">
           <div
@@ -57,7 +60,7 @@ const Registration = ({ ...props}) => {
           font-primetime text-white
           pl-4 pb-3 pt-3 "
           >
-            Registration
+            تسجيل
           </div>
           <Toaster />
           <form onSubmit={handleSubmit(onSubmit)} className="pl-4 pr-4 pt-2">
