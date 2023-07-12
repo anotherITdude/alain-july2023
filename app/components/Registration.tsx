@@ -14,7 +14,7 @@ import * as yup from "yup";
 import { schema } from "@/schemas/Validation";
 import { yupResolver } from "@hookform/resolvers/yup";
 
-const Registration = () => {
+const Registration = ({ ...props}) => {
   const [isLoading, setIsLoading] = useState(false);
   const {
     register,
@@ -48,7 +48,7 @@ const Registration = () => {
   };
 
   return (
-    <div className="bg-cover bg-center registration h-[700px] md:h-[740px]  relative ">
+    <div {...props} className="bg-cover bg-center registration h-[700px] md:h-[740px]  relative ">
       <div className="flex flex-col section ">
         <div className="left">
           <div
