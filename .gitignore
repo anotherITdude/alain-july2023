@@ -2,6 +2,7 @@
 
 files
 .env
+Archive.zip
 
 # dependencies
 /node_modules
