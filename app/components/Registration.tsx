@@ -58,6 +58,12 @@ const Registration = () => {
             method: "POST",
             body: formData,
           });
+           if (uploadResponse.ok) {
+             console.log("Upload successful!");
+           } else {
+             console.log("S3 Upload Error:", uploadResponse);
+             console.log("Upload failed.");
+           }
 
           toast.dismiss(toastStatus);
           toast.success("Your submission is completed...");
