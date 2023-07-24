@@ -40,7 +40,7 @@ const Registration = () => {
 
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     let toastStatus = toast.loading("Uploading data. Please wait...");
-
+    console.log({'data' : data})
     try {
       setIsLoading(true);
       data.contentType = data.receipt[0].type;
@@ -48,6 +48,7 @@ const Registration = () => {
       const response = await axios
         .post("/api/entries", data)
         .then(async (res) => {
+          console.log(res)
           const formData = new FormData();
           Object.entries(res.data.fields).forEach(([key, value]) => {
             formData.append(key, value as string);
