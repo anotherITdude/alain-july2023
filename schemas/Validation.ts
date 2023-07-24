@@ -12,6 +12,9 @@ export type FormValues = {
   email: string;
   emirate: string;
   eid: string;
+  lan: string;
+  selected: boolean;
+  info: string;
   receipt: FileList;
 };
 
@@ -31,15 +34,17 @@ export const schema = yup.object().shape({
   receipt: yup
     .mixed()
     .required("Receipt is required")
-    .test("fileSize", "Please upload your reciept. Max 2 mb limit", (value: any, context) => {
-      return value && value[0] && value[0]?.size <= 200000;
-    })
-    .test("type", "We only support JPEG and PNG images", function (value: any) {
-      if (!value) return true; // Allow empty value if no file is selected
+    .test(
+      "fileSize",
+      "Please upload your receipt. Max 2 mb limit",
+      (value: any, context) => {
+        if (!value || !value[0]) {
+          return false; // No file selected, return false to trigger the error
+        }
 
-      const fileType = value[0]?.type;
-      return fileType === "image/jpeg" || fileType === "image/png";
-    }),
+        return value[0].size <= 2000000; // File size limit is 2 MB (2000000 bytes)
+      },
+    ),
 });
 
 

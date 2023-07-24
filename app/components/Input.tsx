@@ -1,4 +1,5 @@
 "use client";
+import { RefObject } from "react";
 import { FieldErrors, FieldValues, UseFormRegister } from "react-hook-form";
 
 interface InputProps {
@@ -10,6 +11,7 @@ interface InputProps {
   required?: boolean;
   register: UseFormRegister<FieldValues>;
   errors: FieldErrors | any;
+  ref?: RefObject<HTMLInputElement> | null;
 }
 
 const Input: React.FC<InputProps> = ({
@@ -27,7 +29,8 @@ const Input: React.FC<InputProps> = ({
         id={id}
         {...(type === "file"
           ? {
-              accept: "image/jpeg, image/png",
+            accept: "image/jpeg, image/png",
+            multiple: true
             }
           : "")}
         disabled={disabled}

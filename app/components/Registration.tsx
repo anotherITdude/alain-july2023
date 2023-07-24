@@ -1,5 +1,5 @@
 "use client";
-import React, { ChangeEvent } from "react";
+import React, { ChangeEvent, useRef } from "react";
 
 import Image from "next/image";
 import { useState } from "react";
@@ -8,14 +8,16 @@ import form_right from "./../../public/form_right.png";
 import Button from "./Button";
 import Input from "./Input";
 import { motion } from "framer-motion";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 
-import * as yup from "yup";
 import { schema } from "@/schemas/Validation";
 import { yupResolver } from "@hookform/resolvers/yup";
+import axios from "axios";
 
-const Registration = ({ ...props}) => {
+const Registration = () => {
   const [isLoading, setIsLoading] = useState(false);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+
   const {
     register,
     handleSubmit,
@@ -30,25 +32,56 @@ const Registration = ({ ...props}) => {
       email: "",
       emirate: "",
       eid: "",
-      reciept: "",
+      receipt: "",
+      lan: "en",
+      selected: false,
+      info: " ",
     },
   });
-  const notify = () => toast.success("Uploading data pleasse wait");
 
-  const onSubmit: SubmitHandler<FieldValues> = (data) => {
-    setIsLoading(true);
-    const uploading = toast.loading("Uploading data pleasse wait");
-    console.log(data);
-    setIsLoading(true);
-    toast.dismiss(uploading);
-    toast.success("Thankyou for your submission");
+  const onSubmit: SubmitHandler<FieldValues> = async (data) => {
+    let toastStatus = toast.loading("Uploading data. Please wait...");
+    // if (errors['receipt']) {
+    //   if (fileInputRef.current) {
+    //     fileInputRef.current.value = "";
+    //   }
+    // }
+    try {
+      setIsLoading(true);
+      data.contentType = data.receipt[0].type;
+      data.receiptName = data.receipt[0].name;
+      const response = await axios
+        .post("/api/entries", data)
+        .then(async (res) => {
+          const formData = new FormData();
+          Object.entries(res.data.fields).forEach(([key, value]) => {
+            formData.append(key, value as string);
+          });
+          formData.append("file", data.receipt[0]);
+          console.log(formData);
+          const uploadResponse = await fetch(res.data.url, {
+            method: "POST",
+            body: formData,
+          });
 
-    //reset();
-    //setIsLoading(false);
+          toast.dismiss(toastStatus);
+          toast.success("Your submission is completed...");
+          reset()
+        })
+        .finally(() => {
+          setIsLoading(false);
+        });
+    } catch (error) {
+      toast.error("Something went wrong please try again");
+      toast.dismiss(toastStatus);
+    }
   };
 
   return (
-    <div {...props} className="bg-cover bg-center registration h-[700px] md:h-[740px]  relative ">
+    <div
+      id="register"
+      className="bg-cover bg-center registration h-[700px] md:h-[740px]  relative "
+    >
       <div className="flex flex-col section ">
         <div className="left">
           <div
@@ -59,7 +92,6 @@ const Registration = ({ ...props}) => {
           >
             Registration
           </div>
-          <Toaster />
           <form onSubmit={handleSubmit(onSubmit)} className="pl-4 pr-4 pt-2">
             <div className="form-field ">
               <Input
@@ -115,6 +147,7 @@ const Registration = ({ ...props}) => {
             <div className="form-field">
               <Input
                 id="receipt"
+                //ref={fileInputRef}
                 label="UPLOAD PURCHASE RECIEPT"
                 disabled={isLoading}
                 register={register}

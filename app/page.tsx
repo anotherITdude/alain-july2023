@@ -4,7 +4,8 @@ import HowTo from "./components/HowTo";
 import Registration from "./components/Registration";
 import Scholarships from "./components/Scholarships";
 import SchoolYear from "./components/SchoolYear";
-import Terms from "./components/Terms";
+import Terms from "@/app/components/Terms";
+
 
 export default function Home() {
   return (
@@ -13,7 +14,7 @@ export default function Home() {
       <SchoolYear />
       <Scholarships />
       <HowTo />
-      <Registration id='register' />
+      <Registration />
       <Terms />
     </Container>
   );

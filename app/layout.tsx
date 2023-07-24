@@ -1,3 +1,5 @@
+import prismadb from "@/lib/prismadb";
+import { ToasterProvider } from "@/providers/toast-provider";
 import "./globals.css";
 
 export const metadata = {
@@ -9,11 +11,15 @@ export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
-}) {
+  }) {
+ 
   return (
     <html lang="en">
       <link rel="icon" href="/favicon.ico" />
-      <body>{children}</body>
+      <body>
+        <ToasterProvider />
+        {children}
+      </body>
     </html>
   );
 }
