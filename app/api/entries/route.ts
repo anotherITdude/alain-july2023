@@ -35,6 +35,7 @@ export async function POST(req: Request) {
         info: "",
       },
     });
+    console.log(url)
     return NextResponse.json({ url, fields });
   } catch (error) {
     console.log("[ENTRY_POST", error);
