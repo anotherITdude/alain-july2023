@@ -16,7 +16,6 @@ import axios from "axios";
 
 const Registration = () => {
   const [isLoading, setIsLoading] = useState(false);
-  const fileInputRef = useRef<HTMLInputElement>(null);
 
   const {
     register,
@@ -41,11 +40,7 @@ const Registration = () => {
 
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     let toastStatus = toast.loading("Uploading data. Please wait...");
-    // if (errors['receipt']) {
-    //   if (fileInputRef.current) {
-    //     fileInputRef.current.value = "";
-    //   }
-    // }
+
     try {
       setIsLoading(true);
       data.contentType = data.receipt[0].type;
@@ -72,7 +67,7 @@ const Registration = () => {
           setIsLoading(false);
         });
     } catch (error) {
-      toast.error("Something went wrong please try again");
+      toast.error("Something went wrong please try again" +error);
       toast.dismiss(toastStatus);
     }
   };
@@ -147,7 +142,6 @@ const Registration = () => {
             <div className="form-field">
               <Input
                 id="receipt"
-                //ref={fileInputRef}
                 label="UPLOAD PURCHASE RECIEPT"
                 disabled={isLoading}
                 register={register}

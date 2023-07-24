@@ -2,10 +2,10 @@ import { createPresignedPost } from "@aws-sdk/s3-presigned-post";
 import { S3Client } from "@aws-sdk/client-s3";
 
 //AWS S3 BUCKET
-const region = process.env.AWS_REGION as string;
-const bucketName = process.env.AWS_S3_BUCKET_NAME as string;
-const accessKeyId = process.env.AWS_ACCESS_KEY_ID as string;
-const secretAccessKey = process.env.AWS_SECRET_ACCESS_KEY as string;
+const region = process.env.REGION as string;
+const bucketName = process.env.S3_BUCKET_NAME as string;
+const accessKeyId = process.env.ACCESS_KEY_ID as string;
+const secretAccessKey = process.env.SECRET_ACCESS_KEY as string;
 
 
 export const createAWSUrl = async (

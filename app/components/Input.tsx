@@ -11,7 +11,7 @@ interface InputProps {
   required?: boolean;
   register: UseFormRegister<FieldValues>;
   errors: FieldErrors | any;
-  ref?: RefObject<HTMLInputElement> | null;
+  //ref?: RefObject<HTMLInputElement> | null;
 }
 
 const Input: React.FC<InputProps> = ({
