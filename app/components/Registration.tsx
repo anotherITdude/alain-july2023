@@ -40,7 +40,7 @@ const Registration = () => {
 
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     let toastStatus = toast.loading("Uploading data. Please wait...");
-    console.log({'data' : data})
+    console.log({ data: data });
     try {
       setIsLoading(true);
       data.contentType = data.receipt[0].type;
@@ -48,7 +48,7 @@ const Registration = () => {
       const response = await axios
         .post("/api/entries", data)
         .then(async (res) => {
-          console.log(res)
+          console.log(res);
           const formData = new FormData();
           Object.entries(res.data.fields).forEach(([key, value]) => {
             formData.append(key, value as string);
@@ -59,22 +59,22 @@ const Registration = () => {
             method: "POST",
             body: formData,
           });
-           if (uploadResponse.ok) {
-             console.log("Upload successful!");
-           } else {
-             console.log("S3 Upload Error:", uploadResponse);
-             console.log("Upload failed.");
-           }
+          if (uploadResponse.ok) {
+            console.log("Upload successful!");
+          } else {
+            console.log("S3 Upload Error:", uploadResponse);
+            console.log("Upload failed.");
+          }
 
           toast.dismiss(toastStatus);
           toast.success("Your submission is completed...");
-          reset()
+          reset();
         })
         .finally(() => {
           setIsLoading(false);
         });
     } catch (error) {
-      toast.error("Something went wrong please try again" +error);
+      toast.error("Something went wrong please try again" + error);
       toast.dismiss(toastStatus);
     }
   };
