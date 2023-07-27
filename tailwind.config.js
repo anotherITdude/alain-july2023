@@ -6,13 +6,17 @@ module.exports = {
     './app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
 
+  // 0-375, 376-560, 560-975, 975-1024, 1024-1220, 1200 >
   theme: {
-    // screens: {
-    //   sm: '480px',
-    //   md: '600px',
-    //   lg: '976px',
-    //   xl: '1440px',
-    // },
+    screens: {
+      xxs: '375px',
+      xs: '390px',
+      sm: '560px',
+      md: '975px',
+      lg: '1024px',
+      xl: '1220px',
+      xxl: '1221px'
+    },
 
     extend: {
       backgroundImage: {

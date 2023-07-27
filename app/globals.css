@@ -99,7 +99,8 @@ body {
 }
 
 .section{
- @apply p-3 md:p-10
+ @apply pl-3 pr-3 
+ md:pl-10 md:pr-10
 }
 
 .imgWidth {
