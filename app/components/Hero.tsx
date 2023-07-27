@@ -13,7 +13,7 @@ const Hero = () => {
   return (
     <div
       className="bg-center bg-cover hero 
-    h-[570px] md:h-[500px] lg:h-[591px]
+    h-[570px] md:h-[490px] lg:h-[591px]
     flex flex-col overflow-hidden"
     >
       <div className="flex-1">

@@ -9,10 +9,8 @@ module.exports = {
   // 0-375, 376-560, 560-975, 975-1024, 1024-1220, 1200 >
   theme: {
     screens: {
-      xxs: '375px',
-      xs: '390px',
-      sm: '560px',
-      md: '975px',
+      sm: '375px',
+      md: '600px',
       lg: '1024px',
       xl: '1220px',
       xxl: '1221px'
