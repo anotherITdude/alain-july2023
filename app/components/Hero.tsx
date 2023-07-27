@@ -13,7 +13,7 @@ const Hero = () => {
   return (
     <div
       className="bg-center bg-cover hero 
-    h-[590px] md:h-[500px] lg:h-[591px]
+    h-[570px] md:h-[500px] lg:h-[591px]
     flex flex-col overflow-hidden"
     >
       <div className="flex-1">
@@ -23,7 +23,7 @@ const Hero = () => {
         <div className="">
           <div
             className="flex flex-col md:flex-row 
-          justify-evenly items-baseline "
+"
           >
             <div className="left bottom-0 ">
               {/* desktop left image */}
@@ -48,11 +48,11 @@ const Hero = () => {
                 initial={{ opacity: 0, y: -30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}
-                className=""
+                className=" mb-[0px]"
               >
                 <Image
-                  className="w-[500px] mb-12
-                block md:hidden mt-2"
+                  className="w-[500px] mb-8
+                block md:hidden"
                   placeholder="empty"
                   priority={true}
                   quality={100}
@@ -89,7 +89,7 @@ const Hero = () => {
               </motion.div>
               {/* desktop right image */}
               {/* mobile bottom image */}
-              <div className="flex justify-evenly items-baseline md:hidden">
+              <div className="flex  items-baseline md:hidden">
                 <motion.div
                   initial={{ opacity: 0, x: -30 }}
                   whileInView={{ opacity: 1, x: 0 }}
@@ -102,7 +102,7 @@ const Hero = () => {
                     quality={100}
                     alt="hero"
                     src={hero_left_mobile}
-                    className="w-[280px] mb-16 "
+                    className="w-full mb-16"
                   />
                 </motion.div>
                 <motion.div
@@ -117,7 +117,7 @@ const Hero = () => {
                     quality={100}
                     alt="hero"
                     src={f_schoolyear_right}
-                    className="w-[250px] "
+                    className="w-full"
                   />
                 </motion.div>
               </div>
@@ -127,88 +127,6 @@ const Hero = () => {
         </div>
       </div>
     </div>
-    // <div
-    //   className="bg-center bg-cover hero
-    // h-[510px] xs:h-[535px] sm:h-[580px] md:h-[550px] lg:h-full"
-    // >
-    //   <Navbar />
-    //   <div className="relative bg-red-400 top-0">
-    //     <div
-    //       className="flex flex-col-reverse md:flex-row section
-    //   md:justify-center md:mt-[2.2%] items-start"
-    //     >
-    //       <motion.div
-    //         initial={{ opacity: 0, x: -30 }}
-    //         whileInView={{ opacity: 1, x: 0 }}
-    //         transition={{ duration: 1 }}
-    //         className="flex justify-center"
-    //       >
-    //         <Image
-    //           className="w-[65%]
-    //         md:w-[490px] md:mt-[15%]
-    //         lg:w-[490px] lg:mt-[15%]
-    //         hidden md:block"
-    //           placeholder="empty"
-    //           priority={true}
-    //           quality={100}
-    //           alt="hero"
-    //           src={hero_left}
-    //         />
-    //       </motion.div>
-
-    //       {/* mobile image */}
-    //       <motion.div
-    //         initial={{ opacity: 0, x: -30 }}
-    //         whileInView={{ opacity: 1, x: 0 }}
-    //         transition={{ duration: 1 }}
-    //         className="md:hidden bottom-0
-    //       flex flex-row justify-even items-start"
-    //       >
-    //         <Image
-    //           placeholder="empty"
-    //           priority={true}
-    //           quality={100}
-    //           alt="hero"
-    //           src={hero_left_mobile}
-    //           className="
-    //         w-[190px] mt-8 ml-[-5%]
-    //         xs:w-[200px] xs:mt-8 xs:ml-[-5%]
-    //         sm:w-[220px] sm:mt-8 sm:ml-[-2%]"
-    //         />
-    //         <Image
-    //           alt="school year"
-    //           placeholder="empty"
-    //           priority={true}
-    //           quality={100}
-    //           src={schoolyear_right}
-    //           className="
-    //         w-[180px] mt-5 ml-[-4%]
-    //         xs:w-[190px] xs:ml-[-2%]
-    //         sm:w-[220px] sm:ml-[-7%]
-    //         "
-    //         />
-    //       </motion.div>
-    //       {/* mobile image */}
-
-    //       <motion.div
-    //         initial={{ opacity: 0, x: 30 }}
-    //         whileInView={{ opacity: 1, x: 0 }}
-    //         transition={{ duration: 1 }}
-    //         className="flex flex-row justify-center align-baseline"
-    //       >
-    //         <Image
-    //           className="w-full
-    //         md:w-[560px] absolute bottom-0"
-    //           placeholder="empty"
-    //           priority={true}
-    //           quality={100}
-    //           alt="hero"
-    //           src={hero_right}
-    //         />
-    //       </motion.div>
-    //     </div>
-    //   </div>
-    // </div>
   );
 };
 
