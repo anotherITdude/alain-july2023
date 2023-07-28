@@ -11,7 +11,7 @@ const SchoolYear = () => {
   return (
     <div
       className="bg-center bg-cover school_year relative
-    h-[450px] md:h-[500px] overflow-hidden"
+    h-[480px] sm:h-[460px] md:h-[500px] overflow-hidden"
     >
       <div className="flex flex-col section">
         <div className="left m-4 md:mt-12 flex-1">
@@ -67,12 +67,13 @@ const SchoolYear = () => {
                 quality={100}
                 src={book}
                 className="absolute 
-              w-[100px] md:w-[130px]
-              right-[5%]  md:left-[45%]
-              top-[20%] md:top-6"
+                
+              w-[90px] sm:w-[90px] md:w-[130px]
+              right-[-1%] sm:right-[0%]  md:left-[45%]
+              top-[22%] sm:top-[25%] md:top-6"
               />
             </motion.div>
-            <div className=" text-sm mt-[-25px] md:mt-0 max-w-[450px]">
+            <div className=" text-sm mt-[-25px] md:mt-0 max-w-[450px] z-10">
               <div className="font-neosans-regular text-white">
                 Go back to school with more rewards.
                 <br /> Buy selected Al Ain Farms products for <br /> the chance
@@ -153,9 +154,9 @@ const SchoolYear = () => {
               quality={100}
               src={schoolyear_right}
               className="absolute 
-            w-[110px] md:w-[200px] lg:w-[290px]
+            w-[110px] sm:w-[135px] md:w-[200px] lg:w-[290px]
             right-2 md:md:right-12
-            bottom-0"
+            bottom-0 z-0"
             />
           </motion.div>
         </div>
