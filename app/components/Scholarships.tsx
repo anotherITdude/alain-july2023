@@ -8,13 +8,13 @@ const Scholarships = () => {
   return (
     <div
       className="bg-cover bg-center scholarship relative
-    h-[650px] md:h-[619px]
+    h-[650px] md:h-full
     "
     >
       <div className="section">
         <div
           className="10 flex flex-col md:flex-row
-        md:justify-evenly md:items-center"
+        md:justify-evenly md:items-center pt-12 md:pt-2"
         >
           <motion.div
             initial={{ opacity: 0, x: 30 }}
@@ -41,16 +41,23 @@ const Scholarships = () => {
               SCHOLARSHIPS
             </motion.div>
             <div
-              className="text-md font-neosans-regular px-4 text-white pb-2
-            md:pr-10"
+              className="
+              shadow_h3 font-neosans-regular text-2xl px-4 pb-2 md:pr-10"
             >
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-              erat volutpat. Ut wisi
+              AED 15,000 EACH
+            </div>
+
+            <div
+              className="text-md font-neosans-regular px-4 text-white pb-2
+            pr-14 md:pr-10"
+            >
+              <p>
+                10 lucky winners will receive a whole year’s school fees on us!
+              </p>
             </div>
           </div>
         </div>
-
+       
         <div
           className="100 pt-4 
         flex flex-col md:flex-row md:justify-evenly md:items-center"
@@ -80,10 +87,9 @@ const Scholarships = () => {
               BACK TO SCHOOL <br />
               VOUCHERS
             </motion.div>
-            <div className="text-md font-neosans-regular px-4 text-white">
-              Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-              nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
-              erat volutpat. Ut wisi
+            <div className="text-md font-neosans-regular px-4 text-white pr-12 md:pr-10">
+              100 lucky winners will receive vouchers to buy all the school
+              supplies they could need!
             </div>
           </div>
         </div>
