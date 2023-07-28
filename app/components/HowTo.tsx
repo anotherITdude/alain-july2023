@@ -16,9 +16,11 @@ const HowTo = () => {
             >
               How to Enter
             </div>
-            <ul className="list list-decimal font-neosans-bold text-white pl-9 leading-tight
+            <ul
+              className="list list-decimal font-neosans-bold text-white pl-9 leading-tight
              pr-0 md:pr-[18%]
-            ">
+            "
+            >
               <li>
                 PURCHASE AL AIN FARMS FRESH MILK, YOGHURT, LABAN, JUICE, CHICKEN
                 OR EGGS THAT HAVE PROMOTIONAL QR CODE ON THEM.
@@ -49,7 +51,7 @@ const HowTo = () => {
           </div>
         </div>
         <div
-          className=" w-[90vw] md:w-[60vw] mb-4
+          className=" w-[90vw] md:w-[60vw] xl:w-[35vw] mb-4
         text-[#002E6D] font-neosans-regular 
         text-xs md:text-sm
         section ml-3
