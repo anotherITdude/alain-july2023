@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import hero_left from "@/public/f_hero_left_mobile.png";
-import f_schoolyear_right from "@/public/f_schoolyear_right.png";
+import f_schoolyear_right from "@/public/schoolyear_right.png";
 import mobile_top from "@/public/f_hero_mobile_top.png";
 import hero_right from "@/public/f_hero_right.png";
 import hero_left_mobile from "@/public/f_hero_left_mobile.png";
@@ -13,7 +13,7 @@ const Hero = () => {
   return (
     <div
       className="bg-center bg-cover hero 
-    h-[570px] md:h-[490px] lg:h-[591px]
+    h-full md:h-[470px] lg:h-[591px]
     flex flex-col overflow-hidden"
     >
       <div className="flex-1">
@@ -33,7 +33,7 @@ const Hero = () => {
                 transition={{ duration: 1 }}
               >
                 <Image
-                  className="w-[500px] mb-12
+                  className="w-[550px] mb-12
                 hidden md:block"
                   placeholder="empty"
                   priority={true}
@@ -51,7 +51,8 @@ const Hero = () => {
                 className=" mb-[0px]"
               >
                 <Image
-                  className="w-[500px] mb-8
+                  className="w-[500px] mb-0 mt-4
+                  md:mt-0
                 block md:hidden"
                   placeholder="empty"
                   priority={true}
@@ -102,7 +103,7 @@ const Hero = () => {
                     quality={100}
                     alt="hero"
                     src={hero_left_mobile}
-                    className="w-full mb-16"
+                    className=" mb-[40px]"
                   />
                 </motion.div>
                 <motion.div
@@ -117,7 +118,7 @@ const Hero = () => {
                     quality={100}
                     alt="hero"
                     src={f_schoolyear_right}
-                    className="w-full"
+                    className=""
                   />
                 </motion.div>
               </div>

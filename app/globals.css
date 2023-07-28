@@ -71,12 +71,12 @@ body {
 
 
   .shadow_reverse {
-    text-shadow: #ffffff 1.5px 1.5px 0px;
+    text-shadow: #ffffff 1px 1px 0px;
     -webkit-text-stroke: 1px #ffffff;
   }
 
   .shadow_h1 {
-    text-shadow: #002e6d 1.8px 3px 0px;
+    text-shadow: #002e6d 5px 3px 1px;
     -webkit-text-stroke: 1px #002e6d;
   }
 
@@ -99,7 +99,7 @@ body {
 }
 
 .section{
- @apply pl-3 pr-3 
+ @apply pl-4 pr-4 
  md:pl-10 md:pr-10
 }
 
