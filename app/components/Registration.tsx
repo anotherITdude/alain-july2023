@@ -109,7 +109,7 @@ const Registration = () => {
               quality={100}
               src={form_right}
               className="
-              w-[120px] sm:w-[200px] 
+              w-[120px] sm:w-[150px] 
               md:w-[300px] lg:w-[800px]
               md:hidden lg:block
               absolute md:relative 
