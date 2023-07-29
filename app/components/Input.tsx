@@ -29,8 +29,8 @@ const Input: React.FC<InputProps> = ({
         id={id}
         {...(type === "file"
           ? {
-            accept: "image/jpeg, image/png",
-            multiple: true
+              accept: "image/jpeg, image/png",
+              multiple: true,
             }
           : "")}
         disabled={disabled}
@@ -42,22 +42,23 @@ const Input: React.FC<InputProps> = ({
           w-full
           p-4
           pt-6 
-          font-light 
+          font-neosans-regular 
+          text-sm
           bg-white 
           border-2
-          rounded-full
+          rounded-3xl
           outline-none
           transition
           disabled:opacity-70
           disabled:cursor-not-allowed
-          ${errors[id] ? "border-rose-500" : "border-neutral-300"}
+          ${errors[id] ? "border-rose-500" : "border-none"}
           ${errors[id] ? "focus:border-rose-500" : "focus:border-black"}
         `}
       />
       <label
         className={`
           absolute 
-          text-md
+          text-sm
           duration-150 
           transform
           -translate-y-3 

@@ -9,28 +9,28 @@ const Terms = () => {
         </div>
         <ul className="list list-decimal font-neosans-regular text-[#002E6D] pl-7 pr-4 leading-tight">
           <li>
-            To enter the promotion, participants have to purchase any Al Ain
-            Farms Fresh Milk, Long Life Milk, Fresh Chicken, Fresh Eggs, Fresh
-            Laban, Fresh Yoghurt or Fresh Juice with QR Code
+            The competition is open only to UAE residents above 18 years of age
+            with a valid Emirates ID
+          </li>
+          <li>
+            To enter the promotion, participants have to purchase Al Ain Farms
+            Fresh Milk, Yoghurt, Laban, Juice, Chicken or Eggs that have
+            promotional QR code on them.
           </li>
           <li>
             On the landing page, participants have to enter their name, email,
             mobile number, Emirate, Emirates ID number and upload a clear photo
             of the purchase receipt which shows the date and the Al Ain Farms
-            product
+            product.
           </li>
           <li>
             Participants have to register only through the online link which is
-            validated through the scanning of the QR code on the pack.
+            validated through scanning of the QR code on the product.
           </li>
           <li>
-            The competition is open only to UAE residents above 18 years of age
-            with a valid Emirates ID.
-          </li>
-          <li>
-            The last date for submission is *To be provided by the client.
-            Winners will be announced on *To be provided by the client on Al Ain
-            Farms Facebook page and individually contacted for prize collection.
+            The last date for submission is 20th September 2023. Winners will be
+            announced on 10th of October 2023 on the Al Ain Farms social media
+            and individually contacted for prize collection.
           </li>
           <li>
             Selection of winners will be at the sole discretion of Al Ain Farms

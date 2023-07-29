@@ -33,7 +33,8 @@ module.exports = {
         'neosans-bold': ['neosans-bold'],
         'neosans-medium': ['neosans-medium'],
         'neosans-regular': ['neosans-regular'],
-        'primetime': ['primetime']
+        'primetime': ['primetime'],
+        'circularStd': ['circularStd']
       },
     },
   },

@@ -4,7 +4,7 @@ import React, { ChangeEvent, useRef } from "react";
 import Image from "next/image";
 import { useState } from "react";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
-import form_right from "./../../public/form_right.png";
+import form_right from "@/public/f_registration_right.png";
 import Button from "./Button";
 import Input from "./Input";
 import { motion } from "framer-motion";
@@ -82,18 +82,48 @@ const Registration = () => {
   return (
     <div
       id="register"
-      className="bg-cover bg-center registration h-[700px] md:h-[740px]  relative "
+      className="bg-cover bg-center registration h-full md:h-full  relative overflow-hidden "
     >
-      <div className="flex flex-col section ">
-        <div className="left">
+      <div className="flex flex-col  lg:flex-row section 
+      pt-6 pb-8
+      md:pt-16 md:pb-16">
+        <div className="left ">
           <div
             className="shadow_h2 uppercase
           text-3xl md:text-4xl lg:text-5xl 
           font-primetime text-white
-          pl-4 pb-3 pt-3 "
+          pl-4 pb-3 pt-o"
           >
             Registration
           </div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            className=""
+          >
+            <Image
+              alt="school year"
+              placeholder="empty"
+              priority={true}
+              quality={100}
+              src={form_right}
+              className="
+              w-[120px] sm:w-[200px] 
+              md:w-[300px] lg:w-[800px]
+              md:hidden lg:block
+              absolute md:relative 
+              bottom-[1%] 
+              left-4"
+            />
+          </motion.div>
+        </div>
+        <div
+          className="right
+          w-full
+        lg:w-[65vw]
+        md:mt-16"
+        >
           <form onSubmit={handleSubmit(onSubmit)} className="pl-4 pr-4 pt-2">
             <div className="form-field ">
               <Input
@@ -165,22 +195,6 @@ const Registration = () => {
               />
             </div>
           </form>
-        </div>
-        <div className="right">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 1 }}
-          >
-            <Image
-              alt="school year"
-              placeholder="empty"
-              priority={true}
-              quality={100}
-              src={form_right}
-              className=" w-[150px] absolute bottom-[1%] left-4"
-            />
-          </motion.div>
         </div>
       </div>
     </div>

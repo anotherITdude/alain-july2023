@@ -36,7 +36,7 @@ export const schema = yup.object().shape({
     .required("Receipt is required")
     .test(
       "fileSize",
-      "Please upload your receipt. Max 2 mb limit",
+      "Please upload your receipt. Max 2MB",
       (value: any, context) => {
         if (!value || !value[0]) {
           return false; // No file selected, return false to trigger the error

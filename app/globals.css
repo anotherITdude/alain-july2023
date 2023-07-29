@@ -43,6 +43,11 @@ body {
   src: url("../Fonts/PRIMETIME.ttf");
 }
 
+@font-face {
+  font-family: "circularStd";
+  src: url('../Fonts/CircularStd-Black.ttf')
+}
+
 @layer components {
   .hero {
     background-image: url(./../public/hero_bg.jpg);
@@ -86,9 +91,9 @@ body {
   }
 
   .shadow_h3 {
-    text-shadow: #002e6d 1.9px 1.9px 0px;
+    text-shadow: #002e6d 3px 1px 0px;
     color:white;
-    -webkit-text-stroke: .01px #002e6d;
+    -webkit-text-stroke: 0.5px #002e6d;
   }
 
   .heading-2 {

@@ -1,15 +1,14 @@
-'use client'
-import Image from 'next/image';
-import howto_right from '@/public/f_howto_right.png';
-import { motion } from "framer-motion"; 
-
+"use client";
+import Image from "next/image";
+import howto_right from "@/public/f_howto_right.png";
+import { motion } from "framer-motion";
 
 const HowTo = () => {
   return (
-    <div className="bg-cover bg-center howto h-full md:h-[520px] relative">
-      <div className="mainTop flex flex-col">
-        <div className="top flex flex-col justify-center md:flex-row pt-2 md:pt-10 section">
-          <div className="left h-full w-full md:w-[50%]">
+    <div className="bg-cover bg-center howto h-full lg:h-[520px] relative">
+      <div className="mainTop flex flex-col ">
+        <div className="top flex flex-col justify-center lg:flex-row pt-2 md:pt-10 section">
+          <div className="left h-full w-full lg:w-[50%]">
             <div
               className="shadow_h2 text-2xl md:text-3xl lg:text-4xl 
           font-primetime text-white pl-4 pt-4 pb-2 uppercase"
@@ -45,13 +44,13 @@ const HowTo = () => {
                 priority={true}
                 quality={100}
                 src={howto_right}
-                className="w-[280px] m-auto md:w-[600px]"
+                className="w-[280px] m-auto md:w-[400px] lg:w-[600px]"
               />
             </motion.div>
           </div>
         </div>
         <div
-          className=" w-[90vw] md:w-[60vw] xl:w-[35vw] mb-4
+          className=" w-[90vw] lg:w-[60vw] xl:w-[35vw] mb-4
         text-[#002E6D] font-neosans-regular 
         text-xs md:text-sm
         section ml-3
@@ -64,6 +63,6 @@ const HowTo = () => {
       </div>
     </div>
   );
-}
+};
 
-export default HowTo
+export default HowTo;

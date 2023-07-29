@@ -8,13 +8,13 @@ const Scholarships = () => {
   return (
     <div
       className="bg-cover bg-center scholarship relative
-    h-[650px] md:h-full
+    h-[620px] md:h-full
     "
     >
       <div className="section">
         <div
           className="10 flex flex-col md:flex-row
-        md:justify-evenly md:items-center pt-12 md:pt-2"
+        md:justify-evenly md:items-center pt-10 md:pt-12"
         >
           <motion.div
             initial={{ opacity: 0, x: 30 }}
@@ -42,7 +42,7 @@ const Scholarships = () => {
             </motion.div>
             <div
               className="
-              shadow_h3 font-neosans-regular text-2xl px-4 pb-2 md:pr-10"
+              shadow_h3 font-circularStd text-2xl px-4 pb-2 md:pr-10"
             >
               AED 15,000 EACH
             </div>
@@ -59,7 +59,7 @@ const Scholarships = () => {
         </div>
        
         <div
-          className="100 pt-4 
+          className="100 pt-4 md:pb-12
         flex flex-col md:flex-row md:justify-evenly md:items-center"
         >
           <motion.div
