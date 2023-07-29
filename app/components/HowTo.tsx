@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 
 const HowTo = () => {
   return (
-    <div className="bg-cover bg-center howto h-full lg:h-[520px] relative">
+    <div className="bg-cover bg-center howto h-full lg:h-full relative md:pb-8">
       <div className="mainTop flex flex-col ">
         <div className="top flex flex-col justify-center lg:flex-row pt-2 md:pt-10 section">
           <div className="left h-full w-full lg:w-[50%]">

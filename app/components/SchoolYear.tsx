@@ -11,7 +11,7 @@ const SchoolYear = () => {
   return (
     <div
       className="bg-center bg-cover school_year relative
-    h-[480px] sm:h-[460px] md:h-[500px] overflow-hidden"
+    h-[480px] sm:h-[460px] md:h-[560px] overflow-hidden"
     >
       <div className="flex flex-col section">
         <div className="left m-4 md:mt-12 flex-1">
