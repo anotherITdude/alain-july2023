@@ -143,7 +143,7 @@ const SchoolYear = () => {
             />
           </motion.div>
           <motion.div
-            animate={{ opacity:[1,0,1]}}
+            animate={{ opacity: [1, 0, 1] }}
             transition={{ duration: 1 }}
           >
             <Image

@@ -81,17 +81,20 @@ body {
   }
 
   .shadow_h1 {
-    text-shadow: #002e6d 5px 3px 1px;
+       text-shadow: #002e6d 1.8px 3px 0px;
+     -webkit-text-shadow: #002e6d 1.8px 3px 0px;
     -webkit-text-stroke: 1px #002e6d;
   }
 
   .shadow_h2 {
     text-shadow: #002e6d 1.8px 3px 0px;
+     -webkit-text-shadow: #002e6d 1.8px 3px 0px;
     -webkit-text-stroke: 1px #002e6d;
   }
 
   .shadow_h3 {
     text-shadow: #002e6d 3px 1px 0px;
+    -webkit-text-shadow: #002e6d 3px 1px 0px;
     color:white;
     -webkit-text-stroke: 0.5px #002e6d;
   }
