@@ -1,21 +1,22 @@
 "use client";
-import React, { ChangeEvent } from "react";
+import React, { ChangeEvent, useRef } from "react";
 
 import Image from "next/image";
 import { useState } from "react";
 import { FieldValues, SubmitHandler, useForm } from "react-hook-form";
-import form_right from "./../../../public/form_right.png";
+import form_right from "@/public/f_registration_right_ar.png";
 import Button from "./Button";
 import Input from "./Input";
 import { motion } from "framer-motion";
-import toast, { Toaster } from "react-hot-toast";
+import toast from "react-hot-toast";
 
-import * as yup from "yup";
 import { schema } from "@/schemas/Validation";
 import { yupResolver } from "@hookform/resolvers/yup";
+import axios from "axios";
 
-const Registration = ({ ...props}) => {
+const Registration = () => {
   const [isLoading, setIsLoading] = useState(false);
+
   const {
     register,
     handleSubmit,
@@ -30,44 +31,109 @@ const Registration = ({ ...props}) => {
       email: "",
       emirate: "",
       eid: "",
-      reciept: "",
+      receipt: "",
+      lan: "ar",
+      selected: false,
+      info: " ",
     },
   });
-  const notify = () => toast.success("Uploading data pleasse wait");
 
-  const onSubmit: SubmitHandler<FieldValues> = (data) => {
-    setIsLoading(true);
-    const uploading = toast.loading("Uploading data pleasse wait");
-    console.log(data);
-    setIsLoading(true);
-    toast.dismiss(uploading);
-    toast.success("Thankyou for your submission");
+  const onSubmit: SubmitHandler<FieldValues> = async (data) => {
+    let toastStatus = toast.loading("Uploading data. Please wait...");
+    console.log({ data: data });
+    try {
+      setIsLoading(true);
+      data.contentType = data.receipt[0].type;
+      data.receiptName = data.receipt[0].name;
+      const response = await axios
+        .post("/api/entries", data)
+        .then(async (res) => {
+          console.log(res);
+          const formData = new FormData();
+          Object.entries(res.data.fields).forEach(([key, value]) => {
+            formData.append(key, value as string);
+          });
+          formData.append("file", data.receipt[0]);
+          console.log(formData);
+          const uploadResponse = await fetch(res.data.url, {
+            method: "POST",
+            body: formData,
+          });
+          if (uploadResponse.ok) {
+            console.log("Upload successful!");
+          } else {
+            console.log("S3 Upload Error:", uploadResponse);
+            console.log("Upload failed.");
+          }
 
-    //reset();
-    //setIsLoading(false);
+          toast.dismiss(toastStatus);
+          toast.success("Your submission is completed...");
+          reset();
+        })
+        .finally(() => {
+          setIsLoading(false);
+        });
+    } catch (error) {
+      toast.error("Something went wrong please try again" + error);
+      toast.dismiss(toastStatus);
+    }
   };
 
   return (
     <div
-      {...props}
-      className="bg-cover bg-center registration h-[700px] md:h-[740px]  relative "
+      id="register"
+      className="bg-cover bg-center registration h-full md:h-full  relative overflow-hidden "
     >
-      <div className="flex flex-col section ">
-        <div className="left">
+      <div
+        className="flex flex-col  lg:flex-row-reverse section 
+      pt-6 pb-8
+      md:pt-16 md:pb-16"
+      >
+        <div className="left ">
           <div
-            className="shadow_h2 uppercase
+            className="shadow_h3 uppercase
           text-3xl md:text-4xl lg:text-5xl 
-          font-primetime text-white
-          pl-4 pb-3 pt-3 "
+          font-helvetica-neue-lt-arabic-75-bold
+           text-white
+          pr-6 pb-3 pt-0 text-right"
           >
-            تسجيل
+            التسجيل
           </div>
-          <Toaster />
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            className=""
+          >
+            <Image
+              alt="school year"
+              placeholder="empty"
+              priority={true}
+              quality={100}
+              src={form_right}
+              className="
+              w-[120px] sm:w-[150px] 
+              md:w-[300px] lg:w-[700px]
+              xl:w-[900]
+              md:hidden lg:block
+              absolute md:relative 
+              bottom-[1%] 
+              right-4"
+            />
+          </motion.div>
+        </div>
+        <div
+          className="right
+          w-full
+        lg:w-[65vw]
+        xl:w-[50vw]
+        md:mt-16"
+        >
           <form onSubmit={handleSubmit(onSubmit)} className="pl-4 pr-4 pt-2">
-            <div className="form-field ">
+            <div className="form-field  ">
               <Input
                 id="name"
-                label="NAME"
+                label="الاسم"
                 disabled={isLoading}
                 register={register}
                 errors={errors}
@@ -78,7 +144,7 @@ const Registration = ({ ...props}) => {
             <div className="form-field">
               <Input
                 id="mobile"
-                label="MOBILE NUMBER"
+                label="رقم الهاتف المتحرك"
                 disabled={isLoading}
                 register={register}
                 errors={errors}
@@ -88,7 +154,7 @@ const Registration = ({ ...props}) => {
             <div className="form-field">
               <Input
                 id="email"
-                label="EMAIL"
+                label="عنوان البريد الإلكتروني"
                 disabled={isLoading}
                 register={register}
                 errors={errors}
@@ -98,7 +164,7 @@ const Registration = ({ ...props}) => {
             <div className="form-field">
               <Input
                 id="emirate"
-                label="EMIRATE"
+                label="الإمارة"
                 disabled={isLoading}
                 register={register}
                 errors={errors}
@@ -108,7 +174,7 @@ const Registration = ({ ...props}) => {
             <div className="form-field">
               <Input
                 id="eid"
-                label="EMIRATES ID NUMBER"
+                label="رقم بطاقة الهوية الإماراتية"
                 disabled={isLoading}
                 register={register}
                 errors={errors}
@@ -118,7 +184,7 @@ const Registration = ({ ...props}) => {
             <div className="form-field">
               <Input
                 id="receipt"
-                label="UPLOAD PURCHASE RECIEPT"
+                label="تحميل فاتورة الشراء"
                 disabled={isLoading}
                 register={register}
                 errors={errors}
@@ -126,30 +192,16 @@ const Registration = ({ ...props}) => {
               />
             </div>
             <div
-              className={`form-field pt-4 ${isLoading ? "animate-pulse" : ""}`}
+              className={`flex form-field pt-4 ${
+                isLoading ? "animate-pulse" : ""
+              }`}
             >
               <Button
                 disabled={isLoading}
-                label={`${isLoading ? "Submitting form..." : "Submit"}`}
+                label={`${isLoading ? "إرسال..." : "إرسال"}`}
               />
             </div>
           </form>
-        </div>
-        <div className="right">
-          <motion.div
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 1 }}
-          >
-            <Image
-              alt="school year"
-              placeholder="empty"
-              priority={true}
-              quality={100}
-              src={form_right}
-              className=" w-[150px] absolute bottom-[1%] left-4"
-            />
-          </motion.div>
         </div>
       </div>
     </div>

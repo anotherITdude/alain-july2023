@@ -1,4 +1,5 @@
 "use client";
+import { RefObject } from "react";
 import { FieldErrors, FieldValues, UseFormRegister } from "react-hook-form";
 
 interface InputProps {
@@ -10,6 +11,7 @@ interface InputProps {
   required?: boolean;
   register: UseFormRegister<FieldValues>;
   errors: FieldErrors | any;
+  //ref?: RefObject<HTMLInputElement> | null;
 }
 
 const Input: React.FC<InputProps> = ({
@@ -28,6 +30,7 @@ const Input: React.FC<InputProps> = ({
         {...(type === "file"
           ? {
               accept: "image/jpeg, image/png",
+              multiple: true,
             }
           : "")}
         disabled={disabled}
@@ -39,29 +42,32 @@ const Input: React.FC<InputProps> = ({
           w-full
           p-4
           pt-6 
-          font-light 
+          font-helvetica-neue-lt-arabic-75-bold 
+          text-sm
           bg-white 
           border-2
-          rounded-full
+          rounded-3xl
+          text-right
           outline-none
           transition
           disabled:opacity-70
           disabled:cursor-not-allowed
-          ${errors[id] ? "border-rose-500" : "border-neutral-300"}
+          ${errors[id] ? "border-rose-500" : "border-none"}
           ${errors[id] ? "focus:border-rose-500" : "focus:border-black"}
         `}
       />
       <label
         className={`
           absolute 
-          text-md
+          text-sm
+          text-right
           duration-150 
           transform
           -translate-y-3 
           top-5 
           z-10 
           origin-[0] 
-          left-4
+          right-6
           peer-placeholder-shown:scale-100 
           peer-placeholder-shown:translate-y-0 
           peer-focus:scale-75

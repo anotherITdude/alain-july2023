@@ -48,6 +48,26 @@ body {
   src: url('../Fonts/CircularStd-Black.ttf')
 }
 
+@font-face {
+  font-family: "almarai-bold";
+  src: url('../Fonts/Almarai-Bold.ttf')
+}
+
+@font-face {
+  font-family: "almarai-regular";
+  src: url("../Fonts/Almarai-Regular.ttf")
+}
+
+@font-face {
+  font-family: "almarai-extrabold";
+  src: url('../Fonts/Almarai-ExtraBold.ttf')
+}
+
+@font-face {
+  font-family: "helvetica-neue-lt-arabic-75-bold";
+  src: url('../Fonts/helvetica-neue-lt-arabic-75-bold.ttf')
+}
+
 @layer components {
   .hero {
     background-image: url(./../public/hero_bg.jpg);
@@ -93,9 +113,16 @@ body {
   }
 
   .shadow_h3 {
+    color:white;
     text-shadow: #002e6d 3px 1px 0px;
     -webkit-text-shadow: #002e6d 3px 1px 0px;
+    -webkit-text-stroke: 0.5px #002e6d;
+  }
+
+   .shadow_h3_ar {
     color:white;
+    text-shadow: #002e6d 3px 1px 0px;
+    -webkit-text-shadow: #002e6d 3px 1px 0px;
     -webkit-text-stroke: 0.5px #002e6d;
   }
 

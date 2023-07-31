@@ -2,39 +2,42 @@ import Heading from "./Heading";
 
 const Terms = () => {
   return (
-    <div className=" relative bg-[#9AE7FC] pb-4">
-      <div className="section">
+    <div className=" relative bg-[#9AE7FC] pb-4" id="terms" dir="rtl">
+      <div className="section text-right">
         <div className="pb-1">
-          <Heading asterisk={true} title="Terms & conditions" />
+          <Heading className="" asterisk={true} title='تطبق الشروط والأحكام' />
         </div>
-        <ul className="list list-decimal font-neosans-regular text-[#002E6D] pl-7 pr-4 leading-tight">
+        <ul
+          className="list list-decimal text-[#002E6D] pl-7 pr-6 leading-tight
+        font-almarai-bold"
+        >
           <li>
-            To enter the promotion, participants have to purchase any Al Ain
-            Farms Fresh Milk, Long Life Milk, Fresh Chicken, Fresh Eggs, Fresh
-            Laban, Fresh Yoghurt or Fresh Juice with QR Code
+            تقتصر المشاركة في المسابقة على المقيمين في دولة الإمارات العربية
+            المتحدة فوق سن 18 عاماً الذين يحملون بطاقة هوية إماراتية سارية.
           </li>
           <li>
-            On the landing page, participants have to enter their name, email,
-            mobile number, Emirate, Emirates ID number and upload a clear photo
-            of the purchase receipt which shows the date and the Al Ain Farms
-            product
+            . للمشاركة في العرض الترويجي على المشاركين شراء منتجات مزارع العين
+            الطازجة من الحليب أو الزبادي أو اللبن أو العصير أو الدجاج أو البيض
+            المطبوع عليها رمز الاستجابة السريعة (QR) الترويجي.
           </li>
           <li>
-            Participants have to register only through the online link which is
-            validated through the scanning of the QR code on the pack.
+            يتعين على المشاركين الدخول إلى الصفحة الرئيسية في الموقع الإلكتروني
+            لإدخال الاسم وعنوان البريد الإلكتروني ورقم الهاتف المتحرك والإمارة
+            ورقم الهوية الإماراتية وتحميل صورة واضحة لفاتورة الشراء والتي تظهر
+            التاريخ ومنتج مزارع العين.
           </li>
           <li>
-            The competition is open only to UAE residents above 18 years of age
-            with a valid Emirates ID.
+            يتعين على جميع المشاركين التسجيل من خلال الربط الالكتروني وذلك عبر
+            مسح رمز الاستجابة السريعة (QR) الموجود على المنتج.
           </li>
           <li>
-            The last date for submission is *To be provided by the client.
-            Winners will be announced on *To be provided by the client on Al Ain
-            Farms Facebook page and individually contacted for prize collection.
+            آخر موعد للتقديم هو 20 سبتمبر 2023. سوف يتم الإعلان عن الفائزين في
+            10 أكتوبر 2023 على مواقع التواصل الاجتماعي الخاصة بمزارع العين وسيتم
+            الاتصال بكل فائز على حدة لتحصيل جائزته.
           </li>
           <li>
-            Selection of winners will be at the sole discretion of Al Ain Farms
-            management and all decisions will be final and binding.
+            يخضع اختيار الفائزين لتقدير إدارة مزارع العين وستكون جميع القرارات
+            نهائية ومُلزمة.
           </li>
         </ul>
       </div>

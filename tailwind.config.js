@@ -34,7 +34,11 @@ module.exports = {
         'neosans-medium': ['neosans-medium'],
         'neosans-regular': ['neosans-regular'],
         'primetime': ['primetime'],
-        'circularStd': ['circularStd']
+        'circularStd': ['circularStd'],
+        'almarai-bold': ['almarai-bold'],
+        'almarai-extrabold': ['almarai-extrabold'],
+        'almarai-regular': ['almarai-regular'],
+        'helvetica-neue-lt-arabic-75-bold': ['helvetica-neue-lt-arabic-75-bold']
       },
     },
   },
