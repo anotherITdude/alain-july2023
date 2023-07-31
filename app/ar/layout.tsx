@@ -12,7 +12,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" dir="">
-      <link rel="icon" href="/favicon.ico" />
+      <link rel="icon" href="./../favicon.ico" />
       <body>{children}</body>
     </html>
   );
