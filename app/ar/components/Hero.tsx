@@ -2,8 +2,8 @@
 import Image from "next/image";
 import hero_left from "@/public/f_hero_left_mobile.png";
 import f_schoolyear_right from "@/public/schoolyear_right.png";
-import mobile_top from "@/public/f_hero_mobile_top.png";
-import hero_right from "@/public/f_hero_right.png";
+import mobile_top from "@/public/f_hero_mobile_ar.png";
+import hero_right from "@/public/f_hero_ar.png";
 import hero_left_mobile from "@/public/f_hero_left_mobile.png";
 import Navbar from "./Navbar";
 import { motion } from "framer-motion";
