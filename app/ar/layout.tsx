@@ -1,3 +1,4 @@
+import { ToasterProvider } from "@/providers/toast-provider";
 import "../globals.css";
 
 export const metadata = {
@@ -13,7 +14,10 @@ export default function RootLayout({
   return (
     <html lang="en" dir="">
       <link rel="icon" href="./../favicon.ico" />
-      <body>{children}</body>
+      <body>
+        <ToasterProvider />
+        {children}
+      </body>
     </html>
   );
 }
