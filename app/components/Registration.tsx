@@ -40,7 +40,6 @@ const Registration = () => {
 
   const onSubmit: SubmitHandler<FieldValues> = async (data) => {
     let toastStatus = toast.loading("Uploading data. Please wait...");
-    console.log({ data: data });
     try {
       setIsLoading(true);
       data.contentType = data.receipt[0].type;
