@@ -9,7 +9,7 @@ const Terms = () => {
         </div>
         <ul
           className="list list-decimal text-[#002E6D] pl-7 pr-6 leading-tight
-        font-almarai-bold"
+        font-almarai-regular"
         >
           <li>
             تقتصر المشاركة في المسابقة على المقيمين في دولة الإمارات العربية
