@@ -10,7 +10,7 @@ const HowTo = () => {
         <div className="top flex flex-col justify-center lg:flex-row-reverse pt-4 md:pt-10 section">
           <div className="left h-full w-full lg:w-[50%] text-right">
             <div
-              className="shadow_h2 text-3xl md:text-4xl lg:text-5xl 
+              className="shadow_h2 text-3xl md:text-5xl lg:text-6xl 
           font-helvetica-neue-lt-arabic-75-bold
            text-white pr-6 pt-4 pb-2 uppercase"
             >
@@ -57,10 +57,11 @@ const HowTo = () => {
         </div>
       </div>
       <div
+        dir="rtl"
         className="  mb-4  mr-4
         text-[#002E6D] font-almarai-bold text-right
         text-xs md:text-sm section
-        section ml-[25%] 
+        section  ml-[25%] 
         "
       >
         العرض ساري على مجموعة مختارة من منتجات مزارع العين. المنتجات تشمل الحليب

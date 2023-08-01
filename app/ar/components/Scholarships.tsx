@@ -37,19 +37,19 @@ const Scholarships = () => {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 2 }}
-              className="shadow_h2 text-3xl md:text-4xl lg:text-5xl  text-white pr-4 pb-4
+              className="shadow_h2 text-3xl md:text-5xl lg:text-6xl  text-white pr-4 pb-4
               font-helvetica-neue-lt-arabic-75-bold
               "
             >
               منح دراسية
             </motion.div>
             <div
-              className="
+              className=" flex-row-reverse
               shadow_h3 font-helvetica-neue-lt-arabic-75-bold text-2xl pr-4 pb-2 md:pr-4"
             >
-              <span>درهم إماراتي </span>
-              <span className="font-circularStd">15000 </span>
-              <span>قيمة كل منها</span>
+              <span>قيمة كل منها </span>
+              <span className="font-circularStd">15000</span>
+              <span> درهم إماراتي </span>
             </div>
 
             <div
@@ -89,7 +89,7 @@ const Scholarships = () => {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 2 }}
-              className="shadow_h2 text-3xl md:text-4xl lg:text-5xl 
+              className="shadow_h2 text-3xl md:text-5xl lg:text-6xl 
               font-helvetica-neue-lt-arabic-75-bold
                text-white pr-4 pb-4"
             >

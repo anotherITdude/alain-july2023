@@ -84,9 +84,11 @@ const Registration = () => {
       id="register"
       className="bg-cover bg-center registration h-full md:h-full  relative overflow-hidden "
     >
-      <div className="flex flex-col  lg:flex-row section 
+      <div
+        className="flex flex-col  lg:flex-row section 
       pt-6 pb-8
-      md:pt-16 md:pb-16">
+      md:pt-16 md:pb-16"
+      >
         <div className="left ">
           <div
             className="shadow_h2 uppercase
@@ -185,6 +187,9 @@ const Registration = () => {
                 errors={errors}
                 type="file"
               />
+              <div className="mt-2 ml-2 uppercase text-xs cursor-pointer text-[#002E6D] font-neosans-regular ">
+                ( maximum upload size : 2mb )
+              </div>
             </div>
             <div
               className={`form-field pt-4 ${isLoading ? "animate-pulse" : ""}`}

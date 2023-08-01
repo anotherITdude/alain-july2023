@@ -92,7 +92,7 @@ const Registration = () => {
         <div className="left ">
           <div
             className="shadow_h3 uppercase
-          text-3xl md:text-4xl lg:text-5xl 
+          text-3xl md:text-5xl lg:text-6xl 
           font-helvetica-neue-lt-arabic-75-bold
            text-white
           pr-6 pb-3 pt-0 text-right"
@@ -190,6 +190,9 @@ const Registration = () => {
                 errors={errors}
                 type="file"
               />
+              <div className="mt-2 ml-2 text-xs cursor-pointer text-[#002E6D] font-almarai-regular ">
+                ( الحد الأقصى لملف التحميل: 2 ميغا بايت )
+              </div>
             </div>
             <div
               className={`flex form-field pt-4 ${

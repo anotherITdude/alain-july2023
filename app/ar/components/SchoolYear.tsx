@@ -83,10 +83,10 @@ const SchoolYear = () => {
         <div dir="rtl" className="left m-4 md:mt-12 ">
           <div
             className="shadow_h1 text-white 
-          text-3xl md:text-[40px] md:leading-[40px] 
+          text-3xl md:text-[48px] md:leading-[60px] 
           lg:text-[48px] lg:leading-[48px]
           font-helvetica-neue-lt-arabic-75-bold 
-          uppercase mt-4"
+          uppercase mt-4 pb-1"
           >
             ابدأ <br />
             عامك الدراسي
