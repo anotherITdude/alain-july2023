@@ -71,7 +71,7 @@ const SchoolYear = () => {
                 
               w-[90px] sm:w-[90px] md:w-[130px]
               left-[3%] sm:right-[80%]  md:right-[45%]
-              top-[25%] sm:top-[25%] md:top-6"
+              top-[27%] sm:top-[26%] md:top-6"
               />
             </motion.div>
             <div className=" text-sm lg:text-sm mt-[-25px] md:mt-0 max-w-[450px] z-10">
@@ -121,9 +121,8 @@ const SchoolYear = () => {
               className="absolute
               w-[100px] md:w-[150px]
               z-[-10]
-              left-[28%] md:left-[35%]
-              top-[-110%] md:bottom-[10px] lg:top-[-100px]
-              
+              left-[35%] md:left-[35%]
+              top-10 md:bottom-[10px] lg:top-[-100px]
               "
             />
           </motion.div>
