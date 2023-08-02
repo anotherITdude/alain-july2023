@@ -31,7 +31,7 @@ const Navbar = () => {
           placeholder="empty"
           src={logo}
           alt="logo"
-          className="w-[100px]"
+          className="w-[110px]"
         />
       </motion.div>
     </motion.nav>

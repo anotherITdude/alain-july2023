@@ -22,6 +22,7 @@ const Button: React.FC<ButtonProps> = ({
       disabled={disabled}
       className={`
     relative
+    font-almarai-regular
     disabled:opacity-70
     disabled:cursor-not-allowed
     rounded-lg
@@ -29,7 +30,6 @@ const Button: React.FC<ButtonProps> = ({
     transition
     w-[200px]
     float-right
-    font-neosans-regular
     ${outline ? "bg-white" : "bg-[#002E6D]"}
     ${outline ? "border-black" : "border-[#002E6D]"}
     ${outline ? "text-black" : "text-[#9AE7FC]"}

@@ -28,9 +28,19 @@ export const schema = yup.object().shape({
   emirate: yup.string().required("Emirate is required"),
   eid: yup
     .string()
-    .required("EID is required")
-    .min(15, "EID must be at least 15 digits")
-    .matches(/^\d+$/, "EID must be numeric"),
+    .nullable()
+    .test(
+      "is-number-and-min-digits",
+      "EID must be numeric and at least 15 digits",
+      (value) => {
+        if (!value) {
+          return true; // If field is empty, consider it valid
+        }
+
+        // Validate if the value is a number with at least 15 digits
+        return /^\d{15,}$/.test(value);
+      },
+    ),
   receipt: yup
     .mixed()
     .required("Receipt is required")

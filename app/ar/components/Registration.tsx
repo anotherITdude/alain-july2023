@@ -92,7 +92,7 @@ const Registration = () => {
         <div className="left ">
           <div
             className="shadow_h1_ar uppercase
-          text-3xl md:text-5xl lg:text-6xl 
+          text-3xl md:text-4xl lg:text-5xl 
           font-helvetica-neue-lt-arabic-75-bold
            text-white
           pr-6 pb-3 pt-0 text-right"
@@ -195,7 +195,7 @@ const Registration = () => {
               </div>
             </div>
             <div
-              className={`flex form-field pt-4 ${
+              className={`flex form-field  pt-4 ${
                 isLoading ? "animate-pulse" : ""
               }`}
             >
