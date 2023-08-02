@@ -91,7 +91,7 @@ const Registration = () => {
       >
         <div className="left ">
           <div
-            className="shadow_h3 uppercase
+            className="shadow_h1_ar uppercase
           text-3xl md:text-5xl lg:text-6xl 
           font-helvetica-neue-lt-arabic-75-bold
            text-white

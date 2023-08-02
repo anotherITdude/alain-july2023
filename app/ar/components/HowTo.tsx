@@ -10,7 +10,7 @@ const HowTo = () => {
         <div className="top flex flex-col justify-center lg:flex-row-reverse pt-4 md:pt-10 section">
           <div className="left h-full w-full lg:w-[50%] text-right">
             <div
-              className="shadow_h2 text-3xl md:text-5xl lg:text-6xl 
+              className="shadow_h1_ar text-3xl md:text-5xl lg:text-6xl 
           font-helvetica-neue-lt-arabic-75-bold
            text-white pr-6 pt-4 pb-2 uppercase"
             >

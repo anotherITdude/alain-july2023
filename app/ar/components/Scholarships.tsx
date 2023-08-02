@@ -37,7 +37,7 @@ const Scholarships = () => {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 2 }}
-              className="shadow_h2 text-3xl md:text-5xl lg:text-6xl  text-white pr-4 pb-4
+              className="shadow_h1_ar text-3xl md:text-5xl lg:text-6xl  text-white pr-4 pb-6
               font-helvetica-neue-lt-arabic-75-bold
               "
             >
@@ -45,7 +45,7 @@ const Scholarships = () => {
             </motion.div>
             <div
               className=" flex-row-reverse
-              shadow_h3 font-helvetica-neue-lt-arabic-75-bold text-2xl pr-4 pb-2 md:pr-4"
+              shadow_h3_ar font-helvetica-neue-lt-arabic-75-bold text-2xl pr-4 pb-2 md:pr-4"
             >
               <span>قيمة كل منها </span>
               <span className="font-circularStd">15000</span>
@@ -89,11 +89,11 @@ const Scholarships = () => {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 2 }}
-              className="shadow_h2 text-3xl md:text-5xl lg:text-6xl 
+              className="shadow_h1_ar text-3xl md:text-5xl lg:text-6xl 
               font-helvetica-neue-lt-arabic-75-bold
-               text-white pr-4 pb-4"
+               text-white pr-4 pb-6"
             >
-              قسائم العودة إلى <br />
+              قسائم العودة إلى 
               المدارس
             </motion.div>
             <div className="text-md font-almarai-bold px-4 text-white pr-4 md:pr-4">
