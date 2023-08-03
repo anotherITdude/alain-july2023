@@ -42,7 +42,7 @@ const Input: React.FC<InputProps> = ({
           w-full
           p-4
           pt-6 
-          font-helvetica-neue-lt-arabic-75-bold 
+          font-almarai-regular 
           text-sm
           bg-white 
           border-2
@@ -60,6 +60,7 @@ const Input: React.FC<InputProps> = ({
         className={`
           absolute 
           text-sm
+            font-almarai-regular
           text-right
           duration-150 
           transform
