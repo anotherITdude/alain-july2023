@@ -47,9 +47,9 @@ const Scholarships = () => {
               className=" flex-row-reverse
               shadow_h3_ar font-helvetica-neue-lt-arabic-75-bold text-2xl pr-4 pb-2 md:pr-4"
             >
-              <span>قيمة كل منها </span>
+              <span> بقيمة </span>
               <span className="font-circularStd">15,000</span>
-              <span> درهم إماراتي </span>
+              <span> درهم إماراتي لكل منها </span>
             </div>
 
             <div
@@ -93,8 +93,7 @@ const Scholarships = () => {
               font-helvetica-neue-lt-arabic-75-bold
                text-white pr-4 pb-6"
             >
-              قسائم العودة إلى 
-              المدارس
+              قسائم العودة إلى المدارس
             </motion.div>
             <div className="text-md font-almarai-bold px-4 text-white pr-4 md:pr-4">
               100 فائزين محظوظين سيحصلون على قسائم لشراء كافة المستلزمات
