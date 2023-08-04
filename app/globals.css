@@ -68,6 +68,9 @@ body {
   src: url('../Fonts/helvetica-neue-lt-arabic-75-bold.ttf')
 }
 
+
+
+
 @layer components {
   .hero {
     background-image: url(./../public/hero_bg.jpg);
@@ -116,6 +119,7 @@ body {
      -webkit-text-shadow: #002e6d 1.8px 3px 0px;
     -webkit-text-stroke: 1px #002e6d;
   }
+
 
   .shadow_h3 {
     color:white;

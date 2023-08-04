@@ -51,13 +51,13 @@ const Scholarships = () => {
               className="text-md font-neosans-regular px-4 text-white pb-2
             pr-14 md:pr-10"
             >
-              <p>
+              <p className="text-[#002e6d] font-neosans-bold pt-1">
                 10 lucky winners will receive a whole year’s school fees on us!
               </p>
             </div>
           </div>
         </div>
-       
+
         <div
           className="100 pt-4 md:pb-12
         flex flex-col md:flex-row md:justify-evenly md:items-center"
@@ -87,7 +87,7 @@ const Scholarships = () => {
               BACK TO SCHOOL <br />
               VOUCHERS
             </motion.div>
-            <div className="text-md font-neosans-regular px-4 text-white pr-12 md:pr-10">
+            <div className="text-md font-neosans-bold px-4 text-[#002e6d] pr-12 md:pr-10 pt-3">
               100 lucky winners will receive vouchers to buy all the school
               supplies they could need!
             </div>

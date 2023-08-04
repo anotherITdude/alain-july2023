@@ -37,7 +37,7 @@ const Scholarships = () => {
               initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 2 }}
-              className="shadow_h1_ar text-3xl md:text-4xl lg:text-5xl  text-white pr-4 pb-6
+              className="shadow_h1_ar text-3xl md:text-4xl lg:text-5xl  text-white pr-4 pb-4
               font-helvetica-neue-lt-arabic-75-bold
               "
             >
@@ -45,7 +45,7 @@ const Scholarships = () => {
             </motion.div>
             <div
               className=" flex-row-reverse
-              shadow_h3_ar font-helvetica-neue-lt-arabic-75-bold text-2xl pr-4 pb-2 md:pr-4"
+              shadow_h3_ar font-helvetica-neue-lt-arabic-75-bold text-2xl pr-4 pb-3 md:pr-4"
             >
               <span> بقيمة </span>
               <span className="font-circularStd">15,000</span>
@@ -57,7 +57,7 @@ const Scholarships = () => {
               className="text-md font-almarai-bold px-4 text-white pb-2
             pr-4 md:pr-4"
             >
-              <p>
+              <p className="text-[#002e6d] pt-1">
                 10 فائزين محظوظين سوف يفوزون بالرسوم المدرسية لمدة عام كامل!
               </p>
             </div>
@@ -91,11 +91,11 @@ const Scholarships = () => {
               transition={{ duration: 2 }}
               className="shadow_h1_ar text-3xl md:text-4xl lg:text-5xl 
               font-helvetica-neue-lt-arabic-75-bold
-               text-white pr-4 pb-6"
+               text-white pr-4 pb-5"
             >
               قسائم العودة إلى المدارس
             </motion.div>
-            <div className="text-md font-almarai-bold px-4 text-white pr-4 md:pr-4">
+            <div className="text-md font-almarai-bold px-4 text-[#002e6d] pr-4 md:pr-4">
               100 فائزين محظوظين سيحصلون على قسائم لشراء كافة المستلزمات
               المدرسية التي يحتجون إليها!
             </div>

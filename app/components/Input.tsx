@@ -47,6 +47,7 @@ const Input: React.FC<InputProps> = ({
           bg-white 
           border-2
           rounded-3xl
+          capitalize
           outline-none
           transition
           disabled:opacity-70
