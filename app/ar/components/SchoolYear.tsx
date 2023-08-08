@@ -78,12 +78,13 @@ const SchoolYear = () => {
               <div className="font-almarai-bold text-white">
                 عُد إلى مدرستك مع العديد من المكافآت القيمة.
                 <br /> قم بشراء أحد منتجات مزارع العين المختارة للحصول <br />
-                على فرصة للفوز بجوائز مدهشة.
+                على فرصة للفوز بجوائز مدهشة!
               </div>
               <div className="font-almarai-bold text-white mt-2">
                 <span className="font-almarai-extrabold">مدة المسابقة</span>
                 <br />
                 من 20 أغسطس حتى 20 سبتمبر 2023
+                .
               </div>
               <div className="font-almarai-bold text-white mt-2">
                 <span className="font-almarai-extrabold">
@@ -91,6 +92,7 @@ const SchoolYear = () => {
                 </span>
                 <br />
                 10 أكتوبر 2023
+                .
               </div>
             </div>
           </div>

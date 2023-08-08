@@ -77,17 +77,17 @@ const SchoolYear = () => {
               <div className="font-neosans-regular text-white">
                 Go back to school with more rewards.
                 <br /> Buy selected Al Ain Farms products for <br /> the chance
-                to win amazing prizes
+                to win amazing prizes!
               </div>
               <div className="font-neosans-regular text-white mt-2">
                 <span className="font-neosans-bold">Competition period</span>
                 <br />
-                20th August to 20th September 2023
+                20th August to 20th September 2023.
               </div>
               <div className="font-neosans-regular text-white mt-2">
                 <span className="font-neosans-bold">Winners announcement</span>
                 <br />
-                10th October 2023
+                10th October 2023.
               </div>
             </div>
           </div>

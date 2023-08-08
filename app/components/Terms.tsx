@@ -10,7 +10,7 @@ const Terms = () => {
         <ul className="list list-decimal font-neosans-regular text-[#002E6D] pl-7 pr-4 leading-tight">
           <li>
             The competition is open only to UAE residents above 18 years of age
-            with a valid Emirates ID
+            with a valid Emirates ID.
           </li>
           <li>
             To enter the promotion, participants have to purchase Al Ain Farms
